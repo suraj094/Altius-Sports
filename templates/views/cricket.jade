@@ -1,0 +1,111 @@
+extends ../layouts/default
+
+block content
+	head
+		title Altius | Products | Sports
+	div
+		img(src='/images/cricket/Cricket_Cover.jpg', width='100%')
+	.container
+		.breadcram
+			a(href='/') Home
+			|  > Products > Circket
+	.whopage
+		.section-header
+			h2.dark-text Cricket
+		.container.proPage
+			ul#li_block4
+				li
+					strong Only cricket wickets certified by England and Wales Cricket Board
+			// <div class = "content-products">
+			p
+				| As a former international cricketer, Graham Vivian, the founder of TigerTurf NZ Ltd, could see the potential for
+				| synthetic grass cricket wickets. TigerTurf has
+				| developed a range of tufted polypropylene artificial grass wickets and
+				| has more than 20,000 synthetic cricket wickets installed the world over.
+	.section-header
+		.regular.container
+			div
+				img(src='/images/cricket/2.jpg')
+			div
+				img(src='/images/cricket/3.jpg')
+			div
+				img(src='/images/cricket/4.jpg')
+			div
+				img(src='/images/cricket/1.jpg')
+				
+	#d.section-margin
+		.container
+			.col-md-6
+				#d5
+					h3.h4 THE RIGHT PITCH
+					ul.ul
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                          Developed in consultation with top players and administrators
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                           A range of wickets to suit every playing level
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                         Affordable to schools and clubs
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                         Consistent and even surface with fantastic ball bounce and turn
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                         All weather, quick drying
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                         Low maintenance
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                         Extremely hardwearing and durable
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                         Ideal for both indoor and outdoor cricket
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                         Run-up Wickets & Roll-out Wickets available too
+			.col-md-6
+				#d5
+					h3.h4 TigerTurf OUTFIELD
+					ul.ul
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                           Fast draining, structured over a dynamic base
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                            Non-abrasive and durable polyethylene yarn – no skin burn
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                           In-fill of TPE (green, natural rubber) that means no smell and less heat absorption
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                           Medium pile height thus tall enough to absorb shock yet short enough to allow the ball to race to the boundary
+						li#p6
+							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+							|                         Infill allows players to slide and dive without risk of injury
+		br
+		br
+		br
+		br
+	//- .container: .jumbotron
+		img(src='/images/logo.svg', width='160')
+		h1 Welcome
+		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
+		p It includes the latest versions of
+			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
+			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
+		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+		hr
+		if user && user.canAccessKeystone
+			p
+				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
+		else
+			p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
+			p
+				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+				|  to use the Admin UI.
+		hr
+		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
+			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.

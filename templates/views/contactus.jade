@@ -1,0 +1,115 @@
+extends ../layouts/default
+
+block content
+	.container
+		.breadcram
+			a(href="index.html") Home
+			| &gt; Contact Us
+	.container
+		.row.coninfo
+			.col-sm-4.col-xs-12
+				h3 Contact Address
+				.contAdd
+					h5 Altius Sports &amp; Leisure Pvt Ltd
+					p
+						strong Corporate Office:
+						br
+						| 38A/2, Jyotish Roy Road,
+						br
+						| Kolkata – 700053,
+						br
+						| India
+						br
+						i.fa.fa-phone
+						|  +91 33 2498 7783
+						br
+						i.fa.fa-phone
+						|  +91 98362 77678
+					p
+						strong
+							| Sales Office:
+						br
+						| B1/30, Hauz Khas,
+						br
+						| Aurobindo Marg,
+						br
+						| New Delhi – 110016,
+						br
+						| India
+						br
+						i.fa.fa-phone
+						|  +91 33 2498 7783
+						br
+						i.fa.fa-envelope
+						|  info@altiussports.com
+			
+			.col-sm-4.col-xs-12
+				h3 Our Location
+				p
+					iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.093010605024!2d88.33326581420759!3d22.500693241278366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0270bac0087771%3A0x282348a90ff1b4b5!2s36%2F2%2C+Jyotish+Roy+Rd%2C+Ajoy+Nagar%2C+Buroshibtalla%2C+New+Alipore%2C+Kolkata%2C+West+Bengal+700053!5e0!3m2!1sen!2sin!4v1477395243823" width="100%", height="320", allowfullscreen="allowfullscreen")
+						| &lt;br /&gt;
+				p
+					iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.611509266415!2d77.20252871508077!3d28.551394582449873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d8a9e555555%3A0xa0bfba6cc448f7fc!2sCosy+Restaurant!5e0!3m2!1sen!2sin!4v1488191489162", width="100%", height="320", frameborder="0", style="border:0;", allowfullscreen="allowfullscreen")
+			
+			.col-sm-4.ol-xs-12.confrm
+				h3 Request a quote
+				#wpcf7-f56-p20-o1.wpcf7(role="form", lang="en-US", dir="ltr")
+					.screen-reader-response
+					form.wpcf7-form(action="/dev/wp/altius/contact-us/#wpcf7-f56-p20-o1", method="post", novalidate="novalidate")
+						div(style="display: none;")
+							input(type="hidden", name="_wpcf7", value="56")
+							input(type="hidden", name="_wpcf7_version", value="4.6")
+							input(type="hidden", name="_wpcf7_locale", value="en_US")
+							input(type="hidden", name="_wpcf7_unit_tag", value="wpcf7-f56-p20-o1")
+							input(type="hidden", name="_wpnonce", value="3716edacc7")
+						.form-group
+							span.wpcf7-form-control-wrap.text-560
+								input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.form-control(type="text", name="text-560", value="", size="40", aria-required="true", aria-invalid="false", placeholder="Name")
+						.form-group
+							span.wpcf7-form-control-wrap.email-162
+								input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email.form-control(type="email", name="email-162", value="", size="40", aria-required="true", aria-invalid="false", placeholder="Email")
+						.form-group
+							span.wpcf7-form-control-wrap.tel-668
+								input.wpcf7-form-control.wpcf7-text.wpcf7-tel.wpcf7-validates-as-required.wpcf7-validates-as-tel.form-control(type="tel", name="tel-668", value="", size="40", aria-required="true", aria-invalid="false", placeholder="Phone")
+						.form-group
+							span.wpcf7-form-control-wrap.textarea-235
+								textarea.wpcf7-form-control.wpcf7-textarea.form-control(name="textarea-235", cols="40", rows="10", aria-invalid="false", placeholder="Message")
+						p
+							input.wpcf7-form-control.wpcf7-submit.btn.btn-success(type="submit", value="submit",)
+							span.ajax-loader
+						.wpcf7-response-output.wpcf7-display-none
+			
+			.col-sm-12(style="margin-top: 30px;")
+				h3 Careers:
+				p  At Altius, we strive to provide a learning platform for professionals destined to be our change agents. To be a part of our exciting team, drop a mail at info@altiussports.com
+	
+
+
+
+	
+	
+
+
+
+
+	
+//.container: .jumbotron
+		img(src='/images/logo.svg', width='160')
+		h1 Welcome
+		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
+		p It includes the latest versions of
+			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
+			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
+		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+		hr
+		if user && user.canAccessKeystone
+			p
+				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
+		else
+			p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
+			p
+				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+				|  to use the Admin UI.
+		hr
+		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
+			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.

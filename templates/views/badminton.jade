@@ -1,0 +1,111 @@
+extends ../layouts/default
+
+block content
+    body
+        head
+            title Altius | Products | Sports
+        .slider
+            img(src='/images/badminton/Badminton_cover.jpg', alt='slider')
+        .container
+            .breadcram
+            a(href='/') Home
+            |  > Products > Badminton
+        .whopage
+        .section-header
+            h2.dark-text Badminton
+        .container.proPage
+            p
+                | Our product range for badminton includes both indoor and outdoor surfaces. The range of Vinyl and Synthetic Turf surfaces are engineered such that they offer cutting edge solutions meetingthe exacting standards of the sport. No slipping, easily cleaned and matching the standards of the Badminton World Federation.
+        .section-header
+            .regular.container
+                div
+                    img(src='/images/badminton/6.png')
+                div
+                    img(src='/images/badminton/1.jpg')
+                div
+                    img(src='/images/badminton/2.jpg')
+                div
+                    img(src='/images/badminton/3.jpg')
+                div
+                    img(src='/images/badminton/4.jpg')
+                div
+                    img(src='/images/badminton/5.jpg')
+            //- Block2
+        #d.section-margin
+            .container
+                .col-md-6
+                    #d5
+                        h3.h4 Vinyl Sports Surface (Indoor)
+                        ul.ul
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | Extremely durable
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | Easy to install and clean
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | Very resilient
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | High shock absorption
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | Anti-slip surface
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | Sound absorbing
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | Comfortable underfoot experience
+                .col-md-6
+                    #d5
+                        h3.h4 Synthetic Turf
+                        ul.ul
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | All-weather surface, impervious to extremes of temperature
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | Quality virgin fibres, heavy metal and lead free
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | UV stabilized which means no perceptible fading
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | Durable and hard-wearing surface
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | Maintenance friendly
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | A high tuft rate per square metre that withstands spikes as well as cushions bare feet
+                            li#p6
+                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                | Variety of colours for easier demarcation
+            br
+            br
+            br
+            br
+        
+        script(src="/js/jquery/script2.js")
+    //- .container: .jumbotron
+            img(src='/images/logo.svg', width='160')
+            h1 Welcome
+            p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
+            p It includes the latest versions of
+                | <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
+                | and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
+            p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+            hr
+            if user && user.canAccessKeystone
+                p
+                    a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
+            else
+                p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
+                p
+                    a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+                    |  to use the Admin UI.
+            hr
+            p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
+                | <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.

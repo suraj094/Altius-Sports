@@ -1,0 +1,271 @@
+include ../mixins/flash-messages
+
+doctype html
+html
+
+	//- HTML HEADER
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
+		//- title Altius
+		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+
+		//- Customise the stylesheet for your site by editing /public/styles/site.sass
+		link(href="/styles/site.css", rel="stylesheet")
+		link(rel='shortcut icon', href="/favicon.ico", type='image/x-icon')
+		link(rel="stylesheet", href="/styles/site.css")
+		link(href='/styles/vegas.css', rel='stylesheet')
+		link(href='/styles/style.css', rel='stylesheet')
+		link(rel='stylesheet', href='/styles/animate.css')
+		link(href="/styles/slick/slick.css",rel="stylesheet",type="text/css")
+		link(href="/styles/slick/slick-theme.css",rel="stylesheet",type="text/css")
+		link(rel='stylesheet', href='/styles/font-awesome/css/font-awesome.min.css')
+		link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
+		link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Open+Sans')
+		link(href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext', rel='stylesheet', type='text/css')
+		script(src='/js/jquery/jquery-1.11.3.min.js')
+
+
+
+		
+
+		//- Include template-specific stylesheets by extending the css block
+		block css
+
+		//- Add any other template-specific HEAD tags by extending the head block
+		block head
+
+	//- HTML BODY
+	body
+
+		//- HEADER
+		#header: .container
+			#main-nav.navbar.navbar-fixed-top.navbar-details.container
+				.navbar-header
+					button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbar-collapse", aria-expanded="true")
+						span.sr-only 
+							Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href="/")
+						img.altius-logo(src="/images/logo.png", alt="logo")
+				#navbar-collapse.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						li.active
+							a(href="/") Home
+						li
+							a(href="/blog", data-toggle="dropdown") About Us 
+								span.fa.fa-angle-down.caret-pos
+								ul.dropdown-menu.dropdown-aboutus
+									li
+										a.aboutus-list(href="/About_Us") About Altius
+									li
+										a.aboutus-list(href="/Our_Services") Our services
+									li
+										a.aboutus-list(href="/Case-Study-of-the-Month") Case Study of the Month
+						li
+							a(href="/gallery", data-toggle="dropdown") Products
+								span.fa.fa-angle-down.caret-pos
+								ul.dropdown-menu.dropdown-product
+									.col-md-4
+										.left-list
+											.list-title Sports
+										li.product-list
+											a.product-list(href="/Products/Sports/track") Athletic Tracks
+										li.product-list
+											a.product-list(href="/Products/Sports/badminton") Badminton
+										li.product-list
+											a.product-list(href="/Products/Sports/basketball") Basketball
+										li.product-list
+											a.product-list(href="/Products/Sports/cricket") Cricket
+										li.product-list
+											a.product-list(href="/Products/Sports/football") Football
+										li.product-list
+											a.product-list(href="/Products/Sports/hockey") Hockey
+										li.product-list
+											a.product-list(href="/Products/Sports/multi") Multi
+										li.product-list
+											a.product-list(href="/Products/Sports/others") Other Sports
+										li.product-list
+											a.product-list(href="/Products/Sports/tennis") Tennis
+										li.product-list
+											a.product-list(href="/Products/Sports/volleyball") Volley Ball
+									.col-md-4
+										.right-list
+											.list-title Leisure
+										li.product-list
+											a(href="/Leisure/children_play") Children's Play Area
+										li.product-list
+											//- a(href="/Products/golf") Golf
+											a(href="/Leisure/golf") Golf
+										li.product-list
+											a(href="/Leisure/landscape") Landscape
+									.col-md-4
+										.right-list
+											.list-title Other Products
+										ul.product-ul
+											li.product-list
+												a(href="/Other-Products/vinyl") Vinyl Flooring
+											li.product-list
+												a(href="/Other-Products/Shock_Pads") Shock Pads
+											li
+												a.product-list1(href="/Other-Products/base") Base Systems
+											ul
+												li.product-list
+													a.anchor(href='base#ecocept') Ecocept
+												li.product-list
+													a.anchor(href='base#sine') Sine
+												li.product-list
+													a.anchor(href='base#accorder') Accorder
+											li.product-list
+												a(href="/Other-Products/sportacc") Sports Accessories
+					
+						li
+							a(href="/Media") Media
+						li
+							a(href="/fiab") Field in a box
+						li
+							a(href="/payandplay") Pay and Play
+						li
+							a(href="/Contact") Contact Us
+
+										
+
+								
+			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
+			//- ... or completely change this header to suit your design.
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			//div(role="navigation").navbar.navbar-default
+				.container-fluid
+					.navbar-header
+						button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href='/') Altius
+					.collapse.navbar-collapse
+						ul.nav.navbar-nav.navbar-left
+							each link in navLinks
+								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+						ul.nav.navbar-nav.navbar-right
+							if user
+								if user.canAccessKeystone
+									li: a(href='/keystone') Open Keystone
+								li: a(href='/keystone/signout') Sign Out
+							else
+								li: a(href='/keystone/signin') Sign In
+
+		//- BODY
+		#body
+
+			//- NOTE:
+			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
+			//- Remember to include it in your templates when you override the intro and content blocks!
+
+			//- The Intro block appears above flash messages (used for temporary information display)
+			block intro
+
+			//- Flash messages allow you to display once-off status messages to users, e.g. form
+			//- validation errors, success messages, etc.
+			+flash-messages(messages)
+
+			//- The content block should contain the body of your template's content
+			block content
+
+
+		//- FOOTER
+		footer.footer
+			.container.footer-container
+				.col-md-7.company-details
+					.icon-top
+						.col-md-6
+							span.fa.fa-map-marker.red-text.glype-size
+							.office-text Coprporate office
+							.office-addr 38A/2, Jyotish Roy Road<br>Kolkata -700053, India
+							.ph-number
+								| +91 (33) 2498 7783
+								br
+								| +919836277678
+					
+						.col-md-6
+							span.fa.fa-map-marker.red-text.glype-size
+							.office-text.corp-addr Sales office
+							.office-addr.office-marg B1/30, Hauz Khas, Aurobindo Marg,<br>New Delhi -110016, India
+							.ph-number +91 (11) 2656 1112
+				.col-md-2.company-details
+					.icon-top
+						i.fa.fa-envelope.green-text.glype-size(style="display:block")
+						| info@altiussports.com
+					.icon-top
+						i.fa.fa-whatsapp.green-text.glype-size(style="display:block")
+						| +91 98362 SPORT
+						br
+						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (77678)
+				.col-md-3.copyright
+					ul.social
+						li
+							a(href="https://www.facebook.com/altiussports/?ref=aymt_homepage_panel" target="_blank")
+								i.fa.fa-facebook
+						li
+							a(href="https://twitter.com/NewsAltius" target="_blank")
+								i.fa.fa-twitter
+						li
+							a(href="https://twitter.com/NewsAltius" target="_blank")
+								i.fa.fa-instagram
+						span(style="display:block;") ©2017 ALTIUS SPORTS & LEISURE PVT LTD
+		
+			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
+			//- p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
+
+
+		//- JAVASCRIPT
+		//- script.
+		//- 	(function() {
+		//- 	 var cx = '016545140565438238817:27xvhgt5yiw';
+		//- 	 var gcse = document.createElement('script');
+		//- 	 gcse.type = 'text/javascript';
+		//- 	 gcse.async = true;
+		//- 	 gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+		//- 	 var s = document.getElementsByTagName('script')[0];
+		//- 	 s.parentNode.insertBefore(gcse, s);
+		//- 	 })();
+		//- gcse:search
+
+		//- jQuery 1.11.3 is included by default, and required by both Bootstrap
+		//- and the KeystoneJS Content Editor. If you are not targeting IE8,
+		//- you can upgrade to 2.1.4 (also bundled) for better performance.
+		script(src='/js/jquery/jquery-1.11.3.min.js')
+
+		//- Customise which Bootstrap javascript files are served by including
+		//- them specifically here, instead of bootstrap-3.3.5.min.js
+		script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
+		//-//-//////////////////////////////////////////////////////////////////////////////////////////////////////////
+		script(type='text/javascript', src='/js/jquery/jquery.waterwheelCarousel.js')
+				//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
+		//- which generate links to edit content for users who can access Keystone
+		
+
+		//- Add scripts that are globally required by your site here.
+		script(src='/js/jquery/vegas.min.js')
+		script(src='/js/jquery/jquery.viewportchecker.js')
+		script(src="/styles/slick/slick.js")
+		//- script(src='/js/jquery/script.js')
+		script(src="/js/jquery/script2.js")
+		script(src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js')
+		if user && user.canAccessKeystone
+			script(src='/keystone/js/content/editor.js')
+		//- Include template-specific javascript files by extending the js block
+		block js
