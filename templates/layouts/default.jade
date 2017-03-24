@@ -10,8 +10,8 @@ html
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 
 		//- title Altius
+		link(rel='stylesheet', href="/styles/search.css")
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
-
 		//- Customise the stylesheet for your site by editing /public/styles/site.sass
 		link(href="/styles/site.css", rel="stylesheet")
 		link(rel='shortcut icon', href="/favicon.ico", type='image/x-icon')
@@ -131,6 +131,8 @@ html
 							a(href="/payandplay") Pay and Play
 						li
 							a(href="/Contact") Contact Us
+						li
+							gcse:searchbox
 
 										
 
@@ -232,17 +234,16 @@ html
 
 
 		//- JAVASCRIPT
-		//- script.
-		//- 	(function() {
-		//- 	 var cx = '016545140565438238817:27xvhgt5yiw';
-		//- 	 var gcse = document.createElement('script');
-		//- 	 gcse.type = 'text/javascript';
-		//- 	 gcse.async = true;
-		//- 	 gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-		//- 	 var s = document.getElementsByTagName('script')[0];
-		//- 	 s.parentNode.insertBefore(gcse, s);
-		//- 	 })();
-		//- gcse:search
+		script.
+			(function() {
+				var cx = '002728072609327069703:s6gkudbut74';
+				var gcse = document.createElement('script');
+				gcse.type = 'text/javascript';
+				gcse.async = true;
+				gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(gcse, s);
+				})();
 
 		//- jQuery 1.11.3 is included by default, and required by both Bootstrap
 		//- and the KeystoneJS Content Editor. If you are not targeting IE8,
