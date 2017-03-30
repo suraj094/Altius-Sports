@@ -4,7 +4,7 @@ block content
 	head
 		title Altius | Products | Sports
 	div
-		img(src="/images/Basketball/Basketball_Cover.jpg",alt="hockey",width="100%")
+		img(src=Product_contents.image.first,alt="hockey",width="100%")
 	.container
 		.breadcram
 			<a href="/">Home</a>
@@ -15,20 +15,21 @@ block content
 			h2.dark-text Basketball
 		.container.proPage
 
-			p When it comes to basketball, you are spoilt for choice. We have a complete range of products for both indoor and outdoor application, meeting both the price point and 
+			p=Product_contents.content.first
+			//- When it comes to basketball, you are spoilt for choice. We have a complete range of products for both indoor and outdoor application, meeting both the price point and 
 				|	the playing standard of the sport. From Polyurethane Surfaces to Acrylic, Synthetic Turf to Vinyl and Interlocking Tiles, our products meet the exacting standards as set out by FIBA.
 	.section-header
 		.regular.container
 			div
-				img(src="/images/Basketball/1.jpg")
+				img(src=Product_contents.image.second)
 			div
-				img(src="/images/Basketball/Basket1.jpg")
+				img(src=Product_contents.image.third)
 			div
-				img(src="/images/Basketball/Basket2.jpg")
+				img(src=Product_contents.image.fourth)
 			div
-				img(src="/images/Basketball/4.jpg")
+				img(src=Product_contents.image.fifth)
 			div
-				img(src="/images/Basketball/5.jpg")
+				img(src=Product_contents.image.six)
 
 	
 	
@@ -37,81 +38,107 @@ block content
 		.container
 			.col-md-4
 				#d5
-					h3.h4 POLYURETHANE SYSTEM
+					h3.h4=Product_contents.content.Second
+					//- POLYURETHANE SYSTEM
 
 					ul.ul
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Seamless, non-porous and smooth surface
+							=Product_contents.content.Third
+							//- |	Seamless, non-porous and smooth surface
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Optimum sports comfort with perfect friction and sliding properties
+							=Product_contents.content.fourth
+
+							//- |	Optimum sports comfort with perfect friction and sliding properties
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Maximum load-bearing capacity and water resistant coating
+							=Product_contents.content.fifth
+							//- |	Maximum load-bearing capacity and water resistant coating
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Excellent colour fastness, clear line marking and multifunctional use
+							=Product_contents.content.sixth
+							//- |	Excellent colour fastness, clear line marking and multifunctional use
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Easy to maintain and simple to clean and repair
+							=Product_contents.content.seventh
+							//- |	Easy to maintain and simple to clean and repair
 
 			.col-md-4
 				#d5
-					h3.h4 ACRYLIC SURFACES
+					h3.h4=Product_contents.content.eighth
+					//- ACRYLIC SURFACES
 
 					ul.ul
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Premium quality, pre-blended pure acrylic finish
+							=Product_contents.content.nine
+							//- |	Premium quality, pre-blended pure acrylic finish
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	All-weather sporting surface with excellent abrasion resistance and uniform texture
+							=Product_contents.content.ten
+							//- |	All-weather sporting surface with excellent abrasion resistance and uniform texture
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	 Manufactured from premium 100% acrylic resins
+							=Product_contents.content.eleven
+							//- |	 Manufactured from premium 100% acrylic resins
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Confident player footing and true ball bounce
+							=Product_contents.content.twelve
+							//- |	Confident player footing and true ball bounce
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Light, stable, oxide pigments, selective reinforcing powders and fillers assure maximum UV resistance.
+							=Product_contents.content.thirteen
+							//- |	Light, stable, oxide pigments, selective reinforcing powders and fillers assure maximum UV resistance.
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Economical and wide range of colours
+							=Product_contents.content.fourteen
+							//- |	Economical and wide range of colours
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Skid and water resistant
+							=Product_contents.content.fifteen
+							//- |	Skid and water resistant
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Both indoor and outdoor applications
+							=Product_contents.content.sixteen
+
+							//- |	Both indoor and outdoor applications
 			.col-md-4
 				#d5
-					h3.h4 VINYL SPORTS SURFACE (INDOOR)
+					h3.h4=Product_contents.content.seventeen
+					//- VINYL SPORTS SURFACE (INDOOR)
 
 					ul.ul
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Suitable for all indoor sports
+							=Product_contents.content.eighteen
+							//- |	Suitable for all indoor sports
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Easy to install and clean
+							=Product_contents.content.nineteen
+							//- |	Easy to install and clean
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Very resilient
+							=Product_contents.content.twenty
+							//- |	Very resilient
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	High shock absorption
+							=Product_contents.content.twenty1
+							//- |	High shock absorption
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Adequately cushioned leading to reduced injuries
+							=Product_contents.content.twenty2
+							//- |	Adequately cushioned leading to reduced injuries
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Wide range of surfaces from 4.5mm to 8mm
+							=Product_contents.content.twenty3
+							//- |	Wide range of surfaces from 4.5mm to 8mm
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Comfortable underfoot experience
+							=Product_contents.content.twenty4
+							//- |	Comfortable underfoot experience
 						li#p6
 							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Badvanced technology rigorously tested for ball bounce and coefficient of friction
+							=Product_contents.content.twenty5
+							//- |	Badvanced technology rigorously tested for ball bounce and coefficient of friction
 	script(src="/js/jquery/script2.js")

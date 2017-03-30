@@ -3,47 +3,50 @@ block content
     head
         title Altius | Products | Sports
     div
-        img(src='/images/Hockey/Hockey_Cover.jpg', alt='hockey', width='100%')
+        img(src=Product_contents.image.nine, alt='hockey', width='100%')
     .container
         .breadcram
         a(href='/') Home
         |  > Products  > Hockey
     .whopage(style='padding-bottom : 10px;')
         .section-header
-            h2.dark-text Hockey
+            h2(class="dark-text")=Product_contents.page_name
         .container.proPage
             ul#li_block4
                 li
-                    strong Official Supplier to world champions Hockey Australia
+                    strong=Product_contents.content.first
                 li
-                    strong FIH Preferred Supplier
+                    strong=Product_contents.content.Second
+                    //- FIH Preferred Supplier
                 li
-                    strong| Play possible on our WETT surface even when dry thus preserving the most precious of natural resources – Water!
+                    strong=Product_contents.content.Third
+                    //- | Play possible on our WETT surface even when dry thus preserving the most precious of natural resources – Water!
         br
         br
     .section-header(style='padding-bottom : 10px;')
         .regular.container(style='height : 250px;')
             div
-                img(src='/images/Hockey/1.jpg')
+                img(src=Product_contents.image.first)
             div
-                img(src='/images/Hockey/2.jpg')
+                img(src=Product_contents.image.second)
             div
-                img(src='/images/Hockey/Hockey1.jpg')
+                img(src=Product_contents.image.third)
             div
-                img(src='/images/Hockey/Hockey2.jpg')
+                img(src=Product_contents.image.fourth)
             div
-                img(src='/images/Hockey/Hockey3.jpg')
+                img(src=Product_contents.image.fifth)
             div
-                img(src='/images/Hockey/Hockey4.jpg')
+                img(src=Product_contents.image.six)
             div
-                img(src='/images/Hockey/Hockey5.jpg')
+                img(src=Product_contents.image.seven)
             div
-                img(src='/images/Hockey/Hockey6.jpg')
+                img(src=Product_contents.image.eight)
 
     .container.proPage
         p
-            | All internationals, every top club match and almost every other game of hockey is now played on artificial grass hockey turfs. Innovations in synthetic hockey fields have developed fast pitches, true ball roll, and increased player safety and comfort resulting in a faster, more exciting and skillful game.
-            | TigerTurf offers hockey turf products for three different systems – unfilled, dressed and filled. All meet the Federation of International Hockey’s (FIH) performance standards.
+            =Product_contents.content.fourth
+            //- | All internationals, every top club match and almost every other game of hockey is now played on artificial grass hockey turfs. Innovations in synthetic hockey fields have developed fast pitches, true ball roll, and increased player safety and comfort resulting in a faster, more exciting and skillful game.
+            //- | TigerTurf offers hockey turf products for three different systems – unfilled, dressed and filled. All meet the Federation of International Hockey’s (FIH) performance standards.
         br
         br
     //-  Block2
@@ -51,44 +54,55 @@ block content
         .container
             .col-md-12
                 #d5
-                    h3.h4 Unfilled
+                    h3.h4=Product_contents.content.fifth
+                 
                     ul.ul
                         li#p6
                             span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | TigerTurf WETT turf hockey fields are regularly used for international matches throughout the world.
+                            =Product_contents.content.sixth
+                            //- | TigerTurf WETT turf hockey fields are regularly used for international matches throughout the world.
                         li#p6
                             span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Where hockey players demand water turfs, the amount of water required is significantly reduced when compared with the requirement of other hockey turfs 
+                            =Product_contents.content.seventh
+                            //- | Where hockey players demand water turfs, the amount of water required is significantly reduced when compared with the requirement of other hockey turfs 
                         li#p6
                             span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Engineered to provide a playing surface that lasts longer and plays better
+                            =Product_contents.content.eighth
+                            //- | Engineered to provide a playing surface that lasts longer and plays better
                     
                     h3.h4 Dressed
                     ul.ul
                         li#p6
                             span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | TigerTurf's sand-dressed hockey turfs feature densely tufted, soft polyethylene curled yarns that are part-filled with selected round sand.
+                            =Product_contents.content.nine
+                            //- | TigerTurf's sand-dressed hockey turfs feature densely tufted, soft polyethylene curled yarns that are part-filled with selected round sand.
                         li#p6
                             span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | When laid over a rubber pad, all FIH "Global" playing standards are achieved and the need for water is eliminated
+                            =Product_contents.content.ten
+                            //- | When laid over a rubber pad, all FIH "Global" playing standards are achieved and the need for water is eliminated
                         li#p6
                             span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | The special fibres provide a synthetic surface that plays like a 'wet field', whilst the sand layer supports the base of the fibres in strength without appearing on the surface
+                            =Product_contents.content.eleven
+                            //- | The special fibres provide a synthetic surface that plays like a 'wet field', whilst the sand layer supports the base of the fibres in strength without appearing on the surface
                         li#p6
                             span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | For the player, the game is enhanced; for the owner, money is saved
+                            =Product_contents.content.twelve
+                            //- | For the player, the game is enhanced; for the owner, money is saved
 
-                    h3.h4 Filled
+                    h3.h4=Product_contents.content.thirteen
                     ul.ul
                         li#p6
                             span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | TigerTurf's sand-filled hockey fields have excellent features.
+                            =Product_contents.content.fourteen
+                            //- | TigerTurf's sand-filled hockey fields have excellent features.
                         li#p6
                             span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Hockey surfaces that are long lasting and offer excellent ball speed and foot traction
+                            =Product_contents.content.fifteen
+                            //- | Hockey surfaces that are long lasting and offer excellent ball speed and foot traction
                         li#p6
                             span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Multisport - ideal for not only hockey but also other sports
+                            =Product_contents.content.sixteen
+                            //- | Multisport - ideal for not only hockey but also other sports
         br
         br
         br

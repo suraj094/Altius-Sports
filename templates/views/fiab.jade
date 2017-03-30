@@ -1,64 +1,41 @@
 extends ../layouts/default
 
 block content
-	head
-	title Altius | Field In A box
-	.TopImgF
-		img(src="./images/fiab.jpg", alt="slider")
-	.container
-		.breadcram
-			a(href="/") Home
-			| &gt; Field in a Box
-	.whopage
-		.container.products_list
-			.section-header
-				h2.dark-text FIELD IN A BOX
-		.container.propage
-			p.sanoF
-				img(src="images/logo1.png",alt="slider", style="width:200px;")
-				| connects sports with social, educational and economic objectives
-				| An integrated, ready-made solution in a single container that contains a sports field measuring 8,000 square feet (can be made to order).
-				br
-				| Turf suited for football, hockey, cricket, handball and rugby.
-				br
-				| Can be installed on virtually any surface while the container itself can be converted into a sports canteen, classroom, meeting place or an office.
-				br
-				| With a very modest CO<sup>2</sup> footprint, the integrated system also corresponds to the UNs 17 global goals for sustainable development.
-				br
-				| This unique approach helps develop characteristics such as leadership, self-confidence, team spirit and perseverance through sport.
-				br
-				| Helps encourage the participation of all groups in this healthy, social activity, especially children.
-				br
-				| The Field in a box <sup>TM</sup> makes it possible to build up a sustainable and accessible sports infrastructure.
-				br
-				| Helps contribute to social, ecological and economic change.
-				br
-				br
-				| <strong>Come, live your Corporate Social Responsibility through our Box Full of Dreams.</strong>
-				br
-				br
-				| To know more, please follow the
-				a(href="https://www.youtube.com/watch?v=6W6DsWoY7T0")  link
-				|  or write to us at
-				a(style="text-decoration:none;")  info@altiussports.com
-
-	//.container: .jumbotron
-		img(src='/images/logo.svg', width='160')
-		h1 Welcome
-		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
-		p It includes the latest versions of
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
-		hr
-		if user && user.canAccessKeystone
-			p
-				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
-		hr
-		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
+	if Statics.length
+		each static in Statics
+			.TopImgF
+				img(src=static.image.First, alt="slider")
+			.container
+				.breadcram
+					a(href="index.html") Home
+					| &gt; Field in a Box
+			.whopage
+				.container.products_list
+					.section-header
+						h2.dark-text=static.title
+				.container.propage
+					p.sanoF
+						img(src=static.image.Second,alt="slider", style="width:200px;")
+						=static.content.first
+						br
+						=static.content.second
+						br
+						=static.content.third
+						br
+						=static.content.fourth
+						br
+						=static.content.Fifth
+						br
+						=static.content.Sixth
+						br
+						=static.content.Seventh
+						br
+						=static.content.Eighth
+						br
+						br
+						br
+						strong.dsk-quote=static.heading.First
+						br
+						br
+						=static.heading.Second
+					

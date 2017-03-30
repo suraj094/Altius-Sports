@@ -7,311 +7,336 @@ block content
 	.se-pre-con
 	#vegas
 	.container.vegas-text
-	#text-carousel.carousel.slide.container(data-ride='carousel')
-		.text-position
-			.carousel-inner
-				.item.active
-					.carousel-content
-						p.moving-text Consistency in performance, greater comfort and safety.
-				.item
-					.carousel-content
-						p.moving-text Designed to replicate the best natural grass fields.
-				.item
-					.carousel-content
-						p.moving-text Delivering a twelve-month season, rain or shine.
-				.item
-					.carousel-content
-						p.moving-text Fast pitches, true ball roll and increased player safety.
+	if Homes.length
+		each Home in Homes
+			#text-carousel.carousel.slide.container(data-ride='carousel')
+				.text-position
+					.carousel-inner
+						.item.active
+							.carousel-content
+										p(class="moving-text")= Home.content.first
+										//- p(class="moving-text")=Home.content.Second
+										//- p(class="moving-text")=Home.content.Third
+										//- p(class="moving-text")=Home.content.fourth
+						.item
+							.carousel-content
+								p(class="moving-text")= Home.content.Second
+						.item
+							.carousel-content
+								p.moving-text Delivering a twelve-month season, rain or shine.
+						.item
+							.carousel-content
+								p.moving-text Fast pitches, true ball roll and increased player safety.
 	.container-color.section-margin(style='padding-top : 125px;')
 		.container
 			.section-header
-				h2.dark-text who we are
-				h6
-					| Altius creates world-class sporting infrastructure, converting dust bowls into arenas of dreams. Our synthetic grass sports surfaces, athletic tracks and sports flooring systems are accredited by all sports bodies. Our services include design, manufacture, construction, installation and maintenance.
-				h6
-					strong We call it the love of the sport.
-	.container-color.section-margin
-		.section-header(style='padding-bottom : 21.5px;')
-			h2.dark-text our projects
-		.fancySlide.invisible-xs
-			#carousel.dg-container(style='margin-top : 50px;')
-				img(width='473', height='343', src='/images/projects-3.jpg', alt='projects-3')
-				img(width='473', height='343', src='/images/projects-2.jpg', alt='projects-2')
-				img(width='473', height='343', src='/images/projects-1.jpg', alt='projects-1')
+				if Homes.length
+					each Home in Homes
+						h2(class="dark-text")=Home.content.fiveth
+						h6=Home.content.sixth
+						h6
+							strong= Home.content.seventh
+				
+				//- 	| Altius creates world-class sporting infrastructure, converting dust bowls into arenas of dreams. Our synthetic grass sports surfaces, athletic tracks and sports flooring systems are accredited by all sports bodies. Our services include design, manufacture, construction, installation and maintenance.
+				//- h6
+				//- 	strong We call it the love of the sport.
+	if Homes.length
+		each Home in Homes
+			.container-color.section-margin
+				.section-header(style='padding-bottom : 21.5px;')
+					//- if Homes.length
+						each Home in Homes
+					h2(class="dark-text ")=Home.content.eightth
+				.fancySlide.invisible-xs
+					#carousel.dg-container(style='margin-top : 50px;')
+						img(width='473', height='343', src=Home.image.first, alt='projects-3')
+						img(width='473', height='343', src=Home.image.second, alt='projects-2')
+						img(width='473', height='343', src=Home.image.third, alt='projects-1')
+					.container
+						.fancySlide.visible-xtra
+							img.fancySlide-img(src=Home.image.first, alt='projects-3')
+							img.fancySlide-img(src=Home.image.second, alt='projects-2')
+							img.fancySlide-img(src=Home.image.third, alt='projects-1')
+			section#works.works.section-margin
+				.container
+					.section-header
+						h2(class="dark-text")=Home.content.nine
+						h6= Home.content.ten
+					.row.projects.invisible-xs
+						#loader
+							.loader-icon
+						#portfolio-list.col-xs-6.col-sm-3.port-left
+							.hovereffect
+								img(width='320', height='200', src=Home.image.fourth, class='.img-responsive')
+								.overlay
+									.innertext
+										h2=Home.content.pfirst
+						#portfolio-list.col-xs-6.col-sm-3.port-up
+							.hovereffect
+								img(width='320', height='200', src=Home.image.fiveth, class='.img-responsive')
+								.overlay
+									.innertext
+										h2=Home.content.psecond
+						#portfolio-list.col-xs-6.col-sm-3.port-up
+							.hovereffect
+								img(width='320', height='200', src=Home.image.six, class='.img-responsive')
+								.overlay
+									.innertext
+										h2=Home.content.pthird
+						#portfolio-list.col-xs-6.col-sm-3.port-right
+							.hovereffect
+								img(width='320', height='200', src=Home.image.seven, class='.img-responsive')
+								.overlay
+									.innertext
+										h2=Home.content.pfourth
+						#portfolio-list.col-xs-6.col-sm-3.port-left
+							.hovereffect
+								img(width='320', height='200', src=Home.image.eight, class='.img-responsive')
+								.overlay
+									.innertext
+										h2=Home.content.pfiveth
+						#portfolio-list.col-xs-6.col-sm-3
+							.hovereffect
+								img(width='320', height='200', src=Home.image.nine, class='.img-responsive')
+								.overlay
+									.innertext
+										h2=Home.content.psixth
+						#portfolio-list.col-xs-6.col-sm-3
+							.hovereffect
+								img(width='320', height='200', src=Home.image.ten, class='.img-responsive')
+								.overlay
+									.innertext
+										h2=Home.content.pseventh
+						#portfolio-list.col-xs-6.col-sm-3.port-right
+							.hovereffect
+								img(width='320', height='200', src=Home.image.eleven, class='.img-responsive')
+								.overlay
+									.innertext
+										h2=Home.content.peightth
+						#portfolio-list.col-xs-6.col-sm-3.port-left
+							.hovereffect
+								img(width='320', height='200', src=Home.image.twelve,  class='.img-responsive')
+								.overlay
+									.innertext
+										h2=Home.content.pnine
+						#portfolio-list.col-xs-6.col-sm-3.port-down
+							.hovereffect
+								img(width='320', height='200', src=Home.image.thirteen,  class='.img-responsive')
+								.overlay
+									.innertext
+										h2=Home.content.pten
+						#portfolio-list.col-xs-6.col-sm-3.port-down
+							.hovereffect
+								img(width='320', height='200', src=Home.image.fourteen,  class='.img-responsive')
+								.overlay
+									.innertext
+										h2=Home.content.peleven
+						#portfolio-list.col-xs-6.col-sm-3.port-right
+							.hovereffect
+								img(width='320', height='200', src=Home.image.fifteen, class='.img-responsive')
+								.overlay
+									.innertext
+										h2=Home.content.ptwelve
+					.row.projects.visible-xtra
+						.col-xs-6
+							img(src=Home.image.fourth, class='.img-responsive')
+							.port-text
+								h2=Home.content.pfirst
+						.col-xs-6
+							img(src=Home.image.fiveth ,class='.img-responsive')
+							.port-text
+								h2=Home.content.psecond
+						.col-xs-6
+							img(src=Home.image.sixth ,class='.img-responsive')
+							.port-text
+								h2=Home.content.pthird
+						.col-xs-6
+							img(src=Home.image.seven, class='.img-responsive')
+							.port-text
+								h2=Home.content.pfourth
+						.col-xs-6
+							img(src=Home.image.eight, class='.img-responsive')
+							.port-text
+								h2=Home.content.pfiveth
+						.col-xs-6
+							img(src=Home.image.nine, class='.img-responsive')
+							.port-text
+								h2=Home.content.psixth
+						.col-xs-6
+							img(src=Home.image.ten, class='.img-responsive')
+							.port-text
+								h2=Home.content.pseventh
+						.col-xs-6
+							img(src=Home.image.eleven, class='.img-responsive')
+							.port-text
+								h2=Home.content.peightth
+						.col-xs-6
+							img(src=Home.image.twelve, class='.img-responsive')
+							.port-text
+								h2=Home.content.pnine
+						.col-xs-6
+							img(src=Home.image.thirteen, class='.img-responsive')
+							.port-text
+								h2=Home.content.pten
+						.col-xs-6
+							img(src=Home.image.fourtteen, class='.img-responsive')
+							.port-text
+								h2=Home.content.pseleven
+						.col-xs-6
+							img(src=Home.image.fifteen, class='.img-responsive')
+							.port-text
+								h2=Home.content.pstwelve
+			.container-color.section-margin
+				.section-header
+					h2(class="dark-text")=Home.content.ofirst
+				.partnerImage
+					.container
+						.col-xs-12.col-sm-4.fadeleft.image-margin
+							img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image(width='188', height='90', src=Home.image.oone, alt='part-3', sizes='(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px')
+						.col-xs-12.col-sm-4.fadedown.image-margin
+							img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image(width='75', height='150', src=Home.image.otwo, alt='part-3', sizes='(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px')					
+						.col-xs-12.col-sm-4.faderight.image-margin
+							img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image(width='188', height='90', src=Home.image.othree, alt='part-3', sizes='(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px')
+			.factsProject.container-color.section-margin
+				.section-header.bottm
+					h2(class="dark-text")=Home.content.Ojsf
+				.container
+					.col-sm-4.fadeleft
+						p= Home.content.Ojsf1	
+						p= Home.content.Ojsf2
+							//- | In 2012 we took the playground to the skies in Rajkot, building atop rooftops a playing area for cricket, hockey, tennis and recreation. We followed this building a football field in New Delhi and infilling with natural, green rubber and introducing the only yarn in the world with an unlimited play warranty
+						p=Home.content.Ojsf3
+							//- | 2013 witnessed the only water-efficient hockey field in India with play possible both wet and dry followed by a host of multi sport play fields in schools across the country. Our install and civil team were now fully geared to bring a smile on every sports enthusiast.
+						p=Home.content.Ojsf4
+							//- | The Liverpool Academy’s football field in Pune was built by us, ground up, and now home to the DSK Shivajians. We also built our first indoor play area with a lifetime warranty, in Chennai. 2014 was indeed a year of exciting firsts. At the same time, our multi fields grew not just in number, but also in size.
+					.col-sm-4.flipper
+						.figPartner
+							img(src=Home.image.Ojsfimage, alt='Journey So Far Image')
+					.col-sm-4.faderight
+						p= Home.content.Ojsf5
+							//- | The single largest playing field in India, Jio Gardens, ideal not just for football but events and recreational use as well, was completed by us in 2015 in Mumbai, graced by a galaxy of stars from every walk of life. We also commenced work on IAAF approved athletic tracks, sprinting ahead with our commitment to sport.
+						p= Home.content.Ojsf6
+							//- | The FIFA Goal Project field was completed by us in 2016 at Tsirang, Bhutan; a host of installations on a turnkey basis was completed by us in Nepal, across venues, including football and basketball; the FC Barcelona Academy was another feather in our cap and the numbers of multi fields, futsal fields and recreational areas kept growing. Our IAAF athletic track, at Gwalior, was certified Class 1 in 2016 – one of only two such tracks in India!
+						p= Home.content.Ojsf7
+							//- | As we begin 2017, we commence work on yet another FIH Global Hockey Field; a diverse multi turf sport field on a cushioned pad; a football field using our special fibre that remains cooler than all conventional yarns – to name but a few. We look forward to  the growing “pug marks” and our continued commitment to “the love of the sport.”
+			.testimonial.section-margin
+				.section-header.bottm.text-white
+					h2(class="dark-text")= Home.content.Happy
+				.container
+					.row.wow.fadeInRight.animated(data-wow-offset='30', data-wow-duration='1.5s', data-wow-delay='0.15s')
+						.col-md-12
+							#client-feedbacks(style='opacity:1;')
+								.feedback-box.fadeleft.col-sm-4.col-xs-12
+									.message
+										= Home.content.Happy1
+										//- | “I would like to place on record mine and my organisation’s immense gratitude and thanks for the stupendous workmanship and exemplary performance shown by Altius Sports in completion of the “Raptors Field” in our school.
+										br
+										br
+										= Home.content.Happy2
+										//- |  An all-weather field is one of the most complex and technologically challenging projects in the whole gamut of operations in an  international school and Altius Sports has played a stellar role in partnering with AISC to make this a grandstanding success cutting across deadlines and various obstacles which are encountered in a project of such magnitude.”
+									.client
+										.quote
+											i.fa.fa-quote-left.aisc-quote
+										.client-info
+											.client-name(href='')= Home.content.Happy3 
+											.client-company
+												= Home.content.Happy4 
+												br
+												= Home.content.Happy5 
+											.client-image.testi-img1
+												img.client-img(src= Home.image.happyimage1,alt='')
+										.client-image.testi-img2
+											img.client-img(src= Home.image.happyimage2, alt='')
+								.feedback-box.fadedown.col-sm-4.col-xs-12
+									.message
+										= Home.content.Happy6
+										//- | “It is hereby committed that M/S Altius Sports, Kolkata who have successfully completed construction and maintenance of a world class football ground using Tiger Turf, have done us proud with their dedication and technical excellence with utmost professionalism. We have no doubt that their work has contributed very positively to the vision that we at the DSK Dream City, Pune have for the future of development of sports in India.
+										br
+										br
+										= Home.content.Happy7
+										//- | I wish them well in their future endeavours.”
+									.client
+										.quote
+											i.fa.fa-quote-left.dsk-quote
+										.client-info
+											.client-name(href='')= Home.content.Happy8
+											.client-company
+												= Home.content.Happy9
+												//- | Director & CEO,
+												br
+												= Home.content.Happy10
+												//- |  DSK Dream City,
+												br
+												= Home.content.Happy11
+												//- |  Pune
+											.client-image.testi-img1
+												img.client-img(src= Home.image.happyimage3, alt='')
+										.client-image.testi-img2
+											img.client-img(src= Home.image.happyimage3, alt='')
+								.feedback-box.fadedown.col-sm-4.col-xs-12
+									.message
+										= Home.content.Happy12
+										//- | “On Behalf of Merlin Group, I would like to write a note of appreciation to the team of Tiger Turf - promoted by Altius Sports in India for providing us a fantastic all-weather synthetic grass surface at our new residential project.
+										br
+										br
+										= Home.content.Happy13
+										//- | Our residents are thoroughly enjoying the surface while at play and are also very happy with its performance. Moreover the surface also requires minimum maintenance which saves on our recurring cost.
+										br
+										br
+										Home.content.Happy14
+										//- | We greatly appreciate the products that were given to us.”
+									.client
+										.quote.red-text
+											i.fa.fa-quote-left.merin-quote
+										.client-info
+											.client-name(href='')= Home.content.Happy15
+											.client-company
+												= Home.content.Happy16
+												//- | Director,
+												br
+												= Home.content.Happy17
+												//- | Merlin Projects Ltd
+											.client-image.testi-img1
+												img.client-img(src= Home.image.happyimage4, alt='')
+										.client-image.testi-img2
+											img.client-img(src= Home.image.happyimage3, alt='')
+			.certificate.container-color.section-margin
+				.container
+					.section-header
+						h2(class="dark-text")= Home.content.Certifications1
+					.partnerCertificate.fadeup
+						.col-md-3.image-margin
+							a(href='#')
+								img(src= Home.image.Certifications1)
+						.col-md-3.image-margin
+							a(href='#')
+								img(src= Home.image.Certifications2)
+						.col-md-3.image-margin
+							a(href='#')
+								img(src= Home.image.Certifications3)
+						.col-md-3.image-margin
+							a(href='#')
+								img(src= Home.image.Certifications4)
+						.col-md-3.image-margin
+							a(href='#')
+								img(src= Home.image.Certifications5)
+						.col-md-3.image-margin
+							a(href='#')
+								img(src= Home.image.Certifications6)
+						.col-md-3.image-margin
+							a(href='#')
+								img(src= Home.image.Certifications7)
+						.col-md-3.image-margin
+							a(href='#')
+								img(src= Home.image.Certifications8)
 			.container
-				.fancySlide.visible-xtra
-					img.fancySlide-img(src='/images/projects-1.jpg', alt='projects-3')
-					img.fancySlide-img(src='/images/projects-2.jpg', alt='projects-2')
-					img.fancySlide-img(src='/images/projects-3.jpg', alt='projects-1')
-	section#works.works.section-margin
-		.container
-			.section-header
-				h2.dark-text Product Range
-				h6 We have designed and developed many awesome products. Just take a look
-			.row.projects.invisible-xs
-				#loader
-					.loader-icon
-				#portfolio-list.col-xs-6.col-sm-3.port-left
-					.hovereffect
-						img(width='320', height='200', src='/images/portfolio/1.jpg' class='.img-responsive')
-						.overlay
-							.innertext
-								h2 Synthetic Turf for sports
-				#portfolio-list.col-xs-6.col-sm-3.port-up
-					.hovereffect
-						img(width='320', height='200', src='/images/portfolio/2.jpg', class='.img-responsive')
-						.overlay
-							.innertext
-								h2 Synthetic Turf for Leisure
-				#portfolio-list.col-xs-6.col-sm-3.port-up
-					.hovereffect
-						img(width='320', height='200', src='/images/portfolio/3.jpg', class='.img-responsive')
-						.overlay
-							.innertext
-								h2 Synthetic Turf for Children's Play Area
-				#portfolio-list.col-xs-6.col-sm-3.port-right
-					.hovereffect
-						img(width='320', height='200', src='/images/portfolio/4.jpg', class='.img-responsive')
-						.overlay
-							.innertext
-								h2 Atheletic tracks
-				#portfolio-list.col-xs-6.col-sm-3.port-left
-					.hovereffect
-						img(width='320', height='200', src='/images/portfolio/4.jpg', class='.img-responsive')
-						.overlay
-							.innertext
-								h2 PU Surface  for indoor and outdoor Sports
-				#portfolio-list.col-xs-6.col-sm-3
-					.hovereffect
-						img(width='320', height='200', src='/images/portfolio/6.jpg', class='.img-responsive')
-						.overlay
-							.innertext
-								h2 Interlocking tiles for sports
-				#portfolio-list.col-xs-6.col-sm-3
-					.hovereffect
-						img(width='320', height='200', src='/images/portfolio/7.jpg', class='.img-responsive')
-						.overlay
-							.innertext
-								h2 Acrylic Surfaces
-				#portfolio-list.col-xs-6.col-sm-3.port-right
-					.hovereffect
-						img(width='320', height='200', src='/images/portfolio/8.jpg', class='.img-responsive')
-						.overlay
-							.innertext
-								h2 Indoor flooring Surfaces
-				#portfolio-list.col-xs-6.col-sm-3.port-left
-					.hovereffect
-						img(width='320', height='200', src='/images/portfolio/9.jpg',  class='.img-responsive')
-						.overlay
-							.innertext
-								h2 Indoor Sports Surfaces
-				#portfolio-list.col-xs-6.col-sm-3.port-down
-					.hovereffect
-						img(width='320', height='200', src='/images/portfolio/10.jpg',  class='.img-responsive')
-						.overlay
-							.innertext
-								h2 Base systems
-				#portfolio-list.col-xs-6.col-sm-3.port-down
-					.hovereffect
-						img(width='320', height='200', src='/images/portfolio/11.jpg',  class='.img-responsive')
-						.overlay
-							.innertext
-								h2 Shock Pads
-				#portfolio-list.col-xs-6.col-sm-3.port-right
-					.hovereffect
-						img(width='320', height='200', src='/images/portfolio/12.jpg', class='.img-responsive')
-						.overlay
-							.innertext
-								h2 Sports Accessories
-			.row.projects.visible-xtra
-				.col-xs-6
-					img(src='/images/portfolio/1.jpg' class='.img-responsive')
-					.port-text
-						h2 Synthetic Turf for Sports
-				.col-xs-6
-					img(src='/images/portfolio/2.jpg' class='.img-responsive')
-					.port-text
-						h2 Synthetic Turf for Leisure
-				.col-xs-6
-					img(src='/images/portfolio/3.jpg' class='.img-responsive')
-					.port-text
-						h2 Synthetic Turf for Children's Play Area
-				.col-xs-6
-					img(src='/images/portfolio/4.jpg', class='.img-responsive')
-					.port-text
-						h2 Athletic Tracks
-				.col-xs-6
-					img(src='/images/portfolio/5.jpg', class='.img-responsive')
-					.port-text
-						h2 PU Surface  for indoor and outdoor Sports
-				.col-xs-6
-					img(src='/images/portfolio/6.jpg', class='.img-responsive')
-					.port-text
-						h2 Interlocking tiles for Sports
-				.col-xs-6
-					img(src='/images/portfolio/7.jpg', class='.img-responsive')
-					.port-text
-						h2 Acrylic Surfaces
-				.col-xs-6
-					img(src='/images/portfolio/8.jpg', class='.img-responsive')
-					.port-text
-						h2 Indoor Flooring Surfaces
-				.col-xs-6
-					img(src='/images/portfolio/9.jpg', class='.img-responsive')
-					.port-text
-						h2 Indoor Sports Surfaces
-				.col-xs-6
-					img(src='/images/portfolio/10.jpg', class='.img-responsive')
-					.port-text
-						h2 Base Systems
-				.col-xs-6
-					img(src='./images/portfolio/11.jpg', class='.img-responsive')
-					.port-text
-						h2 Shock Pads
-				.col-xs-6
-					img(src='./images/portfolio/12.jpg', class='.img-responsive')
-					.port-text
-						h2 Sports Accessories
-	.container-color.section-margin
-		.section-header
-			h2.dark-text Our Partners
-		.partnerImage
-			.container
-				.col-xs-12.col-sm-4.fadeleft.image-margin
-					img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image(width='188', height='90', src='./images/part2.jpg', alt='part-3', sizes='(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px')
-				.col-xs-12.col-sm-4.fadedown.image-margin
-					img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image(width='75', height='150', src='./images/part1.jpg', alt='part-3', sizes='(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px')					
-				.col-xs-12.col-sm-4.faderight.image-margin
-					img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image(width='188', height='90', src='./images/part3.jpg', alt='part-3', sizes='(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px')
-	.factsProject.container-color.section-margin
-		.section-header.bottm
-			h2.dark-text Our Journey So Far
-		.container
-			.col-sm-4.fadeleft
-				p
-					| In 2010, we installed our first FIH Global hockey surface at GNDU, Amritsar, beginning our innings in India. This was soon followed by our first multi-field in Kolkata in 2011, bringing together all the stalwarts of Indian hockey. And a host of cricket wickets, further championing the cause of the sub-continent, not to mention another hockey field.
-				p
-					| In 2012 we took the playground to the skies in Rajkot, building atop rooftops a playing area for cricket, hockey, tennis and recreation. We followed this building a football field in New Delhi and infilling with natural, green rubber and introducing the only yarn in the world with an unlimited play warranty
-				p
-					| 2013 witnessed the only water-efficient hockey field in India with play possible both wet and dry followed by a host of multi sport play fields in schools across the country. Our install and civil team were now fully geared to bring a smile on every sports enthusiast.
-				p
-					| The Liverpool Academy’s football field in Pune was built by us, ground up, and now home to the DSK Shivajians. We also built our first indoor play area with a lifetime warranty, in Chennai. 2014 was indeed a year of exciting firsts. At the same time, our multi fields grew not just in number, but also in size.
-			.col-sm-4.flipper
-				.figPartner
-					img(src='/images/fact-1.jpg', alt='Journey So Far Image')
-			.col-sm-4.faderight
-				p
-					| The single largest playing field in India, Jio Gardens, ideal not just for football but events and recreational use as well, was completed by us in 2015 in Mumbai, graced by a galaxy of stars from every walk of life. We also commenced work on IAAF approved athletic tracks, sprinting ahead with our commitment to sport.
-				p
-					| The FIFA Goal Project field was completed by us in 2016 at Tsirang, Bhutan; a host of installations on a turnkey basis was completed by us in Nepal, across venues, including football and basketball; the FC Barcelona Academy was another feather in our cap and the numbers of multi fields, futsal fields and recreational areas kept growing. Our IAAF athletic track, at Gwalior, was certified Class 1 in 2016 – one of only two such tracks in India!
-				p
-					| As we begin 2017, we commence work on yet another FIH Global Hockey Field; a diverse multi turf sport field on a cushioned pad; a football field using our special fibre that remains cooler than all conventional yarns – to name but a few. We look forward to  the growing “pug marks” and our continued commitment to “the love of the sport.”
-	.testimonial.section-margin
-		.section-header.bottm.text-white
-			h2.dark-text Happy Clients
-		.container
-			.row.wow.fadeInRight.animated(data-wow-offset='30', data-wow-duration='1.5s', data-wow-delay='0.15s')
-				.col-md-12
-					#client-feedbacks(style='opacity:1;')
-						.feedback-box.fadeleft.col-sm-4.col-xs-12
-							.message
-								| “I would like to place on record mine and my organisation’s immense gratitude and thanks for the stupendous workmanship and exemplary performance shown by Altius Sports in completion of the “Raptors Field” in our school.
-								br
-								br
-								|  An all-weather field is one of the most complex and technologically challenging projects in the whole gamut of operations in an  international school and Altius Sports has played a stellar role in partnering with AISC to make this a grandstanding success cutting across deadlines and various obstacles which are encountered in a project of such magnitude.”
-							.client
-								.quote
-									i.fa.fa-quote-left.aisc-quote
-								.client-info
-									.client-name(href='') Alankrit Arora
-									.client-company
-										| Director Business Affairs,
-										br
-										|  AIS, Chennai
-									.client-image.testi-img1
-										img.client-img(src='/images/clients-pic/1.jpg', alt='')
-								.client-image.testi-img2
-									img.client-img(src='/images/clients-pic/1.jpg', alt='')
-						.feedback-box.fadedown.col-sm-4.col-xs-12
-							.message
-								| “It is hereby committed that M/S Altius Sports, Kolkata who have successfully completed construction and maintenance of a world class football ground using Tiger Turf, have done us proud with their dedication and technical excellence with utmost professionalism. We have no doubt that their work has contributed very positively to the vision that we at the DSK Dream City, Pune have for the future of development of sports in India.
-								br
-								br
-								| I wish them well in their future endeavours.”
-							.client
-								.quote
-									i.fa.fa-quote-left.dsk-quote
-								.client-info
-									.client-name(href='') Brig S K Sharma
-									.client-company
-										| Director & CEO,
-										br
-										|  DSK Dream City,
-										br
-										|  Pune
-									.client-image.testi-img1
-										img.client-img(src='/images/clients-pic/2.jpg', alt='')
-								.client-image.testi-img2
-									img.client-img(src='/images/clients-pic/2.jpg', alt='')
-						.feedback-box.fadedown.col-sm-4.col-xs-12
-							.message
-								| “On Behalf of Merlin Group, I would like to write a note of appreciation to the team of Tiger Turf - promoted by Altius Sports in India for providing us a fantastic all-weather synthetic grass surface at our new residential project.
-								br
-								br
-								| Our residents are thoroughly enjoying the surface while at play and are also very happy with its performance. Moreover the surface also requires minimum maintenance which saves on our recurring cost.
-								br
-								br
-								| We greatly appreciate the products that were given to us.”
-							.client
-								.quote.red-text
-									i.fa.fa-quote-left.merin-quote
-								.client-info
-									.client-name(href='') Dilip Choudhary
-									.client-company
-										| Director,
-										br
-										| Merlin Projects Ltd
-									.client-image.testi-img1
-										img.client-img(src='/images/clients-pic/3.jpg', alt='')
-								.client-image.testi-img2
-									img.client-img(src='/images/clients-pic/3.jpg', alt='')
-	.certificate.container-color.section-margin
-		.container
-			.section-header
-				h2.dark-text Our Certifications
-			.partnerCertificate.fadeup
-				.col-md-3.image-margin
-					a(href='#')
-						img(src='/images/Certificate/certificate-1.jpg')
-				.col-md-3.image-margin
-					a(href='#')
-						img(src='/images/Certificate/certificate-3.jpg')
-				.col-md-3.image-margin
-					a(href='#')
-						img(src='/images/Certificate/certificate-4.jpg')
-				.col-md-3.image-margin
-					a(href='#')
-						img(src='/images/Certificate/certificate-5.jpg')
-				.col-md-3.image-margin
-					a(href='#')
-						img(src='/images/Certificate/certificate-6.jpg')
-				.col-md-3.image-margin
-					a(href='#')
-						img(src='/images/Certificate/certificate-7.jpg')
-				.col-md-3.image-margin
-					a(href='#')
-						img(src='/images/Certificate/certificate-8.jpg')
-				.col-md-3.image-margin
-					a(href='#')
-						img(src='/images/Certificate/certificate-9.jpg')
-	.container
-		.touch.section-margin
-			.section-header.text-white
-				h2.dark-text newsletter
-				h6 Suscribe to our newsletter
-			.touch-input
-				input.input-box(type='text', placeholder='Enter email')
-				button.btn.btn-md.btn-custom(type='submit') Subscribe
+				.touch.section-margin
+					.section-header.text-white
+						h2(class="dark-text ")= Home.content.news1
+						h6= Home.content.news2
+					.touch-input
+						input.input-box(type='text', placeholder='Enter email')
+						button.btn.btn-md.btn-custom(type='submit') Subscribe
 	script(src='/js/jquery/script.js')
 	script(type='text/javascript', src='/js/jquery/jquery.waterwheelCarousel.js')
 	script.

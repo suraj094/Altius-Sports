@@ -1,122 +1,124 @@
 extends ../layouts/default
 
 block content
-    head
-        title Altius | Products | Sports
-    div
-        img(src='/images/tennis/Tennis_Cover.jpg', alt='Tennis', width='100%')
-    .container
-        .breadcram
-            a(href='/') Home
-            |  > Products  > Tennis
-    .whopage
-        .section-header
-            h2.dark-text tennis
-    .container.proPage
-        ul#li_block4
-            li
-                strong Davis Cup played on TigerTurf
-            li
-                strong Founder member of the International Tennis Federation
-            li
-                strong Our courts outlive and outplay every other tennis surface
-        br
-        br
-    .section-header
-        .regular.container
+    if Badmintons.length
+        each badminton in Badmintons
+            head
+                title Altius | Products | Sports
             div
-                img(src='/images/tennis/tennis1.jpg')
-            div
-                img(src='/images/tennis/tennis2.jpg')
-            div
-                img(src='/images/tennis/tennis3.jpg')
-            div
-                img(src='/images/tennis/tennis4.jpg')
-            div
-                img(src='/images/tennis/tennis5.jpg')
-            div
-                img(src='/images/tennis/tennis6.jpg')
-    
-    .container.proPage
-        p
-            | ITF certified TigerTurf is simply a more professional playing surface, designed in consultation with the best players and engineered to keep them at the top of their game. Not only that, we have a range of speeds to suit every playing need. From comfort to speed, from rallies to serve and volley, TigerTurf is the Ace when it comes to tennis!
-        p
-            br
-            br
-    //- Block2
-    #d.section-margin
-        .container
-            .col-md-6
-                #d5
-                    h3.h4 WHY TIGERTURF – The Turf That Never Retires
-                    ul.ul
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Lasts 3 times longer than conventional hard courts / acrylic courts
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Low maintenance and requires no watering, mowing or rolling
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Sand in-fill soaks up large amount of water and play can resume faster
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Responds to spin, yet retains bounce
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Synthetic grass is cushioned and hence less risk of injury
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Surface is not slippery or dangerous when wet and has excellent traction
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | The court does not get as hot as other conventional surfaces and can be hosed down
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Surface difficult to vandalize for scraping or gouging merely displaces sand in-fill
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Surface is glare free and UV stabilized
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | ow abrasion prolongs the life of the tennis ball and sports’ shoes, not to mention the cushioned surface being stress free on body joints
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Surface absorbs noise and echoes
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Choice of colours to suit surroundings, along with permanently tufted lines
-            .col-md-6
-                #d5
-                    h3.h4 ACRYLIC SURFACE
-                    ul.ul
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Premium quality, pre-blended pure acrylic finish
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | All-weather sporting surface with excellent abrasion resistance and uniform texture
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            |  Manufactured from premium 100% acrylic resins
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Confident player footing and true ball bounce
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Light, stable, oxide pigments, selective reinforcing powders and fillers assure maximum UV resistance
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Economical and wide range of colours
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            | Skid and water resistant
-                        li#p6
-                            span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                            |  Both indoor and outdoor applications
-        br
-        br
-        br
-        br
+                img(src=badminton.image.First, alt='Tennis', width='100%')
+            .container
+                .breadcram
+                    a(href='/') Home
+                    |  > Products  > Tennis
+            .whopage
+                .section-header
+                    h2.dark-text=badminton.title
+            .container.proPage
+                ul#li_block4
+                    li
+                        strong=badminton.heading.first
+                    li
+                        strong=badminton.heading.second
+                    li
+                        strong=badminton.heading.third
+                br
+                br
+            .section-header
+                .regular.container
+                    div
+                        img(src=badminton.image.Second)
+                    div
+                        img(src=badminton.image.Third)
+                    div
+                        img(src=badminton.image.Fourth)
+                    div
+                        img(src=badminton.image.Fifth)
+                    div
+                        img(src=badminton.image.Sixth)
+                    div
+                        img(src=badminton.image.Seventh)
+            
+            .container.proPage
+                p=badminton.content.first
+                    //- | ITF certified TigerTurf is simply a more professional playing surface, designed in consultation with the best players and engineered to keep them at the top of their game. Not only that, we have a range of speeds to suit every playing need. From comfort to speed, from rallies to serve and volley, TigerTurf is the Ace when it comes to tennis!
+                p
+                    br
+                    br
+            //- Block2
+            #d.section-margin
+                .container
+                    .col-md-6
+                        #d5
+                            h3.h4=badminton.heading.fourth
+                            ul.ul
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.second
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.third
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.fourth
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.fifth
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.sixth
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.seventh
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.eighth
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.ninth
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.tenth
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.eleventh
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.twelth
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.thirteenth
+                    .col-md-6
+                        #d5
+                            h3.h4=badminton.heading.fifth
+                            ul.ul
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.forteenth
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.fifteenth
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.sixteenth
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.seventeenth
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.eighteenth
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.ninteenth
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.twenteith
+                                li#p6
+                                    span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                    =badminton.content.twentyfirst
+                br
+                br
+                br
+                br
 
 

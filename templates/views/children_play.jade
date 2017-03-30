@@ -1,96 +1,102 @@
 extends ../layouts/default
 
 block content
-	head
-		title Altius | Products | Leisure
-	div
-		img(src="/images/cpa/Kidsplay_Cover.jpg",alt="hockey",width="100%")
-	.container
-		.breadcram
-			<a href="/">Home</a>
-			|	&gt; Products &gt; Children&rsquo;s Play Area
-	
-	.whopage
-		.section-header
-			h2.dark-text Children&rsquo;s Play Area
-		.container.proPage
+	if Badmintons.length
+		each badminton in Badmintons
+			head
+				title Altius | Products | Leisure
+			div
+				img(src=badminton.image.First,alt="hockey",width="100%")
+			.container
+				.breadcram
+					<a href="/">Home</a>
+					|	&gt; Products &gt; Children&rsquo;s Play Area
+			
+			.whopage
+				.section-header
+					h2.dark-text=badminton.title
+				.container.proPage
 
-			ul#li_block4
-				li<strong>Critical Fall Height of up to 3metres!</strong>
-				li<strong>Create your own design</strong>
-				li<strong>We call it LIFE - Learning In Fun Environments</strong>
-	.section-header
-		.regular.container
-			div
-				img(src="/images/cpa/2.jpg")
-			div
-				img(src="/images/cpa/CPlay1.jpg")
-			div
-				img(src="/images/cpa/3.jpg")
-			div
-				img(src="/images/cpa/4.jpg")
-			div
-				img(src="/images/cpa/CPlay2.jpg")
-			div
-				img(src="/images/cpa/5.jpg")
-			div
-				img(src="/images/cpa/1.jpg")
-	
-	.container.proPage
-		p Safe, soft, durable and an inviting playing surface – that’s what TigerTurf synthetic surfaces are when it comes to Kindergartens. Creatively installed, it can transform your playground into an area that maximizes fun, minimizes injury and promotes play and activity all day whatever the weather.What is more, with our TigerPads, that are high in compressive strength and have no permanent deformation, you can have a surface conforming to the most rigourous fall-height criterion.
-		br
-	
-	#d.section-margin
-		.container
-			.col-md-6
-				#d5
-					h3.h4 SYNTHETIC TURF
+					ul#li_block4
+						li
+							strong=badminton.heading.first
+						li
+							strong=badminton.heading.second
+						li
+							strong=badminton.heading.third
+			.section-header
+				.regular.container
+					div
+						img(src=badminton.image.Second)
+					div
+						img(src=badminton.image.Third)
+					div
+						img(src=badminton.image.Fourth)
+					div
+						img(src=badminton.image.Fifth)
+					div
+						img(src=badminton.image.Sixth)
+					div
+						img(src=badminton.image.Seventh)
+					div
+						img(src=badminton.image.Eighth)
+			
+			.container.proPage
+				p=badminton.content.first
+				//-  Safe, soft, durable and an inviting playing surface – that’s what TigerTurf synthetic surfaces are when it comes to Kindergartens. Creatively installed, it can transform your playground into an area that maximizes fun, minimizes injury and promotes play and activity all day whatever the weather.What is more, with our TigerPads, that are high in compressive strength and have no permanent deformation, you can have a surface conforming to the most rigourous fall-height criterion.
+				br
+			
+			#d.section-margin
+				.container
+					.col-md-6
+						#d5
+							h3.h4=badminton.heading.fourth
 
-					ul.ul
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	More durable than natural grass
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Ideal for high use or in areas with high rainfall
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Non-abrasive, shock absorbing surface for safer playgrounds
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	The free-draining synthetic surface is playable in any weather, so energetic kids are not kept indoors because of wet or muddy play areas
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Easy to clean and a more hygienic playground
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Requires little maintenance, keeps costs to a minimum and remains beautiful and inviting for years
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	The design options are endless allowing to combine vibrant colours and shapes to create a wonderfully stimulating and interactive surface
-			.col-md-6
-				#d5
-					h3.h4 VINYL SPORTS SURFACE (INDOOR)
+							ul.ul
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.second
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.third
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.fourth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.fifth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.sixth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.seventh
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.eighth
+					.col-md-6
+						#d5
+							h3.h4=badminton.heading.fifth
 
-					ul.ul
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Extremely durable
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Easy to install and clean
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Very resilient
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	High shock absorption
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Anti-slip surface
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Sound absorbing
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Comfortable underfoot experience
+							ul.ul
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.ninth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.tenth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.eleventh
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.twelth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.thirteenth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.forteenth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.fifteenth

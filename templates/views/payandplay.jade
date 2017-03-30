@@ -1,106 +1,84 @@
 extends ../layouts/default
 
 block content
-	head
-		title Altius | Play & Play
-	div
-		img(src="./images/play/Play_Cover.jpg", width="100%")
-	.container
-		.breadcram
-			a(href="/") Home
-			|  &gt; Pay and Play
-	.whopage
-		.container.products_list
-			.section-header
-				h1.dark-text PAY AND PLAY
+	if Statics.length
+		each static in Statics
+
 			div
-				p(style="font-size: 16px; text-align:left; margin-bottom:20px; color:#0872c8; text-transform: uppercase;")
-					strong About Altuis Lifestyle
-			.container.proPage
-				p
-				| To help you interact with the environment better, Altius Lifestyle has come into the fore to literally provide a level playing field for all. With special emphasis on a world-class product, coupled with facilities that are bespoke in nature, Altius Lifestyle has raised the bar of the venue and sport alike to bring to you the best in futsal and box-cricket.
-			.sano_li
-				br
-				br
-				p(style="text-align:center; margin-bottom:20px;")
-					img(src="./images/Altius-Lifestyle-logo.png", alt="altius-lifestyle-logo")
-					br.tiger-break
-					img.tiger-logo(src="./images/Tiger-Play-Logo.jpg", alt="altius-lifestyle-logo")
-				br
-				br
-				p(style="font-size: 16px; text-align:left; margin-bottom:20px; color:#0872c8; text-transform: uppercase;")
-					strong Tiger Play Venues
-			
-			.imgBoxes
-				ul
-					li
-						img.myImages(src="./images/play/PP1_New.jpg")
+				img(src=static.image.First, width="100%")
+			.container
+				.breadcram
+					a(href="index.html") Home
+					|  &gt; Pay and Play
+			.whopage
+				.container.products_list
+					.section-header
+						h1.dark-text=static.title
+					div
+						p(style="font-size: 16px; text-align:left; margin-bottom:20px; color:#0872c8; text-transform: uppercase;")
+							strong=static.heading.First
+					.container.proPage
+						p=static.content.first
+						
+					.sano_li
 						br
 						br
-						.gridFline
-							| Tiger play, Citi Mall, Andheri Link Road, Andheri West, Rooftop, Mumbai
-						.gridSline
-							| For Bookings, Contact: +91 9167777678
-					li
-						img.myImages(src="./images/play/PP2_New.jpg")
+						p(style="text-align:center; margin-bottom:20px;")
+							img(src=static.image.Second, alt="altius-lifestyle-logo")
+							br.tiger-break
+							img.tiger-logo(src=static.image.Third, alt="altius-lifestyle-logo")
 						br
 						br
-						.gridFline
-							| Tiger Play, Ishanya Mall, Opp. Golf Course, Off Airport Road, Yerwada, Pune
-						.gridSline
-							| For Bookings, Contact: +91 8007011511
-					li
-						img.myImages(src="./images/play/PP3_New.jpg")
-						br
-						br
-						.gridFline
-							| Tiger Play, Lokhandwala, Garden No. 17, Between Highland Park and Premium Tower, Lokhandwala, Andheri West, Mumbai
-						.gridSline
-							| For Bookings, Contact: +91 9167777678
-					li
-						img.myImages(src="./images/play/PP4_New.jpg")
-						br
-						br
-						.gridFline
-							| Tiger Play, PDSA, Sports Complex, Swami Vivekananda Road, Sundar Nagar, Malad West, Mumbai
-						.gridSline
-							| For Bookings, Contact: +91 7531882767
-							br 
-							| +91 8881875490
-					li
-						img.myImages(src="./images/play/PP5_New.jpg")
-						br
-						br
-						.gridFline
-							| Tiger Play, Vasant Vihar, The Football Link, Farm House No. 25, Green Avenue, Vasant Kunj, New Delhi
-						.gridSline
-							| For Bookings, Contact: +91 7531882767
-							br
-							| +91 8881875490
-		.container.proPage
-			.side
-				h5 For events and birthday parties, check our Facebook page.
-	br
-	br
+						p(style="font-size: 16px; text-align:left; margin-bottom:20px; color:#0872c8; text-transform: uppercase;")
+							strong=static.heading.Second
+					
+					.imgBoxes
+						ul
+							li
+								img.myImages(src=static.image.Fourth)
+								br
+								br
+								.gridFline=static.heading.Third
+									
+								.gridSline=static.content.second
+									
+							li
+								img.myImages(src=static.image.Fifth)
+								br
+								br
+								.gridFline=static.heading.Fourth
+									
+								.gridSline=static.content.third
+									
+							li
+								img.myImages(src=static.image.Sixth)
+								br
+								br
+								.gridFline=static.heading.Fifth
+									
+								.gridSline=static.content.fourth
+									
+							li
+								img.myImages(src=static.image.Seventh)
+								br
+								br
+								.gridFline=static.heading.Sixth
+									
+								.gridSline=static.content.Fifth
+								
+							li
+								img.myImages(src=static.image.Eighth)
+								br
+								br
+								.gridFline=static.heading.Seventh
+									
+								.gridSline=static.content.Sixth
+									
+				.container.proPage
+					.side
+						h5=static.heading.Eighth
+			br
+			br
 					
 
-	//.container: .jumbotron
-		img(src='/images/logo.svg', width='160')
-		h1 Welcome
-		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
-		p It includes the latest versions of
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
-		hr
-		if user && user.canAccessKeystone
-			p
-				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
-		hr
-		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
+	

@@ -1,94 +1,95 @@
 extends ../layouts/default
 
 block content
-    body
-        head
-            title Altius | Products | Sports
-        .slider
-            img(src='/images/badminton/Badminton_cover.jpg', alt='slider')
-        .container
-            .breadcram
-            a(href='/') Home
-            |  > Products > Badminton
-        .whopage
-        .section-header
-            h2.dark-text Badminton
-        .container.proPage
-            p
-                | Our product range for badminton includes both indoor and outdoor surfaces. The range of Vinyl and Synthetic Turf surfaces are engineered such that they offer cutting edge solutions meetingthe exacting standards of the sport. No slipping, easily cleaned and matching the standards of the Badminton World Federation.
-        .section-header
-            .regular.container
-                div
-                    img(src='/images/badminton/6.png')
-                div
-                    img(src='/images/badminton/1.jpg')
-                div
-                    img(src='/images/badminton/2.jpg')
-                div
-                    img(src='/images/badminton/3.jpg')
-                div
-                    img(src='/images/badminton/4.jpg')
-                div
-                    img(src='/images/badminton/5.jpg')
-            //- Block2
-        #d.section-margin
-            .container
-                .col-md-6
-                    #d5
-                        h3.h4 Vinyl Sports Surface (Indoor)
-                        ul.ul
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | Extremely durable
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | Easy to install and clean
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | Very resilient
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | High shock absorption
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | Anti-slip surface
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | Sound absorbing
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | Comfortable underfoot experience
-                .col-md-6
-                    #d5
-                        h3.h4 Synthetic Turf
-                        ul.ul
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | All-weather surface, impervious to extremes of temperature
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | Quality virgin fibres, heavy metal and lead free
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | UV stabilized which means no perceptible fading
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | Durable and hard-wearing surface
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | Maintenance friendly
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | A high tuft rate per square metre that withstands spikes as well as cushions bare feet
-                            li#p6
-                                span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                | Variety of colours for easier demarcation
-            br
-            br
-            br
-            br
-        
-        script(src="/js/jquery/script2.js")
+    if Badmintons.length
+        each badminton in Badmintons
+            body
+                head
+                    title Altius | Products | Sports
+                .slider
+                    img(src=badminton.image.First, alt='slider')
+                .container
+                    .breadcram
+                    a(href='/') Home
+                    |  > Products > Badminton
+                .whopage
+                .section-header
+                    h2.dark-text=badminton.title
+                .container.proPage
+                    p=badminton.content.first
+                        //- | Our product range for badminton includes both indoor and outdoor surfaces. The range of Vinyl and Synthetic Turf surfaces are engineered such that they offer cutting edge solutions meetingthe exacting standards of the sport. No slipping, easily cleaned and matching the standards of the Badminton World Federation.
+                .section-header
+                    .regular.container
+                        div
+                            img(src=badminton.image.Second)
+                        div
+                            img(src=badminton.image.Third)
+                        div
+                            img(src=badminton.image.Fourth)
+                        div
+                            img(src=badminton.image.Fifth)
+                        div
+                            img(src=badminton.image.Sixth)
+                        
+                    //- Block2
+                #d.section-margin
+                    .container
+                        .col-md-6
+                            #d5
+                                h3.h4=badminton.heading.first
+                                ul.ul
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.second
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.third
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.fourth
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.fifth
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.sixth
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.seventh
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.eighth
+                        .col-md-6
+                            #d5
+                                h3.h4=badminton.heading.second
+                                ul.ul
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.ninth
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.tenth
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.eleventh
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.twelth
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.thirteenth
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.forteenth
+                                    li#p6
+                                        span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+                                        =badminton.content.fifteenth
+                    br
+                    br
+                    br
+                    br
+                
+                script(src="/js/jquery/script2.js")
     //- .container: .jumbotron
             img(src='/images/logo.svg', width='160')
             h1 Welcome

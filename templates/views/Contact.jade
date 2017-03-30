@@ -10,11 +10,48 @@ block content
 	.container
 		.row.coninfo
 			.col-sm-4.col-xs-12
-				h3 Contact Address
+				if contacts.length
+					each contact in contacts
+						h3=contact.content.first
 				.contAdd
-					h5 Altius Sports &amp; Leisure Pvt Ltd
-					p
-						strong Corporate Office:
+					if contacts.length
+						each contact in contacts
+							h5= contact.content.second
+							p
+							strong=contact.content.third
+							<br>
+							=contact.content.ten
+							<br>
+							=contact.content.eleven
+							<br>
+							=contact.content.twelve
+							<br>
+							i.fa.fa-phone
+							=contact.content.thirteen
+							<br>
+							i.fa.fa-phone
+							=contact.content.fourteen
+							p
+							strong=contact.content.fifteen
+							<br>
+							=contact.content.sixteen
+							<br>
+							=contact.content.seventeen
+							<br>
+							=contact.content.eightteen
+							<br>
+							=contact.content.nineteen
+							<br>
+							i.fa.fa-phone
+							=contact.content.twenty
+							<br>
+							i.fa.fa-envelope
+							=contact.content.twentyone
+
+
+					//- h5 Altius Sports &amp; Leisure Pvt Ltd
+					//- p
+					//- 	strong Corporate Office:
 						br
 						| 38A/2, Jyotish Roy Road,
 						br
@@ -27,34 +64,42 @@ block content
 						br
 						i.fa.fa-phone
 						|  +91 98362 77678
-					p
-						strong
-							| Sales Office:
-						br
-						| B1/30, Hauz Khas,
-						br
-						| Aurobindo Marg,
-						br
-						| New Delhi – 110016,
-						br
-						| India
-						br
-						i.fa.fa-phone
-						|  +91 33 2498 7783
-						br
-						i.fa.fa-envelope
-						|  info@altiussports.com
+					//- p
+						//- strong
+						//- 	| Sales Office:
+						//- br
+						//- | B1/30, Hauz Khas,
+						//- br
+						//- | Aurobindo Marg,
+						//- br
+						//- | New Delhi – 110016,
+						//- br
+						//- | India
+						//- br
+						//- i.fa.fa-phone
+						//- |  +91 33 2498 7783
+						//- br
+						//- i.fa.fa-envelope
+						//- |  info@altiussports.com
 			
 			.col-sm-4.col-xs-12
-				h3 Our Location
-				p
-					iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.093010605024!2d88.33326581420759!3d22.500693241278366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0270bac0087771%3A0x282348a90ff1b4b5!2s36%2F2%2C+Jyotish+Roy+Rd%2C+Ajoy+Nagar%2C+Buroshibtalla%2C+New+Alipore%2C+Kolkata%2C+West+Bengal+700053!5e0!3m2!1sen!2sin!4v1477395243823" width="100%", height="320", allowfullscreen="allowfullscreen")
+				if contacts.length
+					each contact in contacts
+						h3= contact.content.fourth
+						iframe(src=contact.content.fiveth)
+						iframe(src=contact.content.Sixth)
+				//- h3 Our Location
+				//- p
+				//- 	iframe(src=contact.content.Fiveth)
 						| &lt;br /&gt;
-				p
-					iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.611509266415!2d77.20252871508077!3d28.551394582449873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d8a9e555555%3A0xa0bfba6cc448f7fc!2sCosy+Restaurant!5e0!3m2!1sen!2sin!4v1488191489162", width="100%", height="320", frameborder="0", style="border:0;", allowfullscreen="allowfullscreen")
+				//- p
+				//- 	iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.611509266415!2d77.20252871508077!3d28.551394582449873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d8a9e555555%3A0xa0bfba6cc448f7fc!2sCosy+Restaurant!5e0!3m2!1sen!2sin!4v1488191489162", width="100%", height="320", frameborder="0", style="border:0;", allowfullscreen="allowfullscreen")
 			
 			.col-sm-4.ol-xs-12.confrm
-				h3 Request a quote
+				if contacts.length
+					each contact in contacts
+						h3= contact.content.Seventh
+				//- h3 Request a quote
 				#wpcf7-f56-p20-o1.wpcf7(role="form", lang="en-US", dir="ltr")
 					.screen-reader-response
 					form.wpcf7-form(action="/dev/wp/altius/contact-us/#wpcf7-f56-p20-o1", method="post", novalidate="novalidate")
@@ -82,8 +127,10 @@ block content
 						.wpcf7-response-output.wpcf7-display-none
 			
 			.col-sm-12(style="margin-top: 30px;")
-				h3 Careers:
-				p  At Altius, we strive to provide a learning platform for professionals destined to be our change agents. To be a part of our exciting team, drop a mail at info@altiussports.com
+				if contacts.length
+					each contact in contacts
+						h3= contact.content.eightth
+						p= contact.content.nineth
 	
 
 

@@ -1,85 +1,87 @@
 extends ../layouts/default
 
 block content
-	head
-		title Altius | Products | Leisure
-	div
-		img(src="/images/landscape/Landscape_Cover.jpg",alt="hockey",width="100%")
-	.container
-		.breadcram
-			<a href="/">Home</a>
-			|	&gt; Products &gt; Landscape
-	
-	.whopage
-		.section-header
-			h2.dark-text Landscape
-		.container.proPage
-
+	if Badmintons.length
+		each badminton in Badmintons
+			head
+				title Altius | Products | Leisure
+			div
+				img(src=badminton.image.First,alt="hockey",width="100%")
+			.container
+				.breadcram
+					<a href="/">Home</a>
+					|	&gt; Products &gt; Landscape
 			
-	.section-header
-		.regular.container
-			div
-				img(src="/images/landscape/Land1.jpg")
-			div
-				img(src="/images/landscape/Land2.jpg")
-			div
-				img(src="/images/landscape/Land3.jpg")
-			div
-				img(src="/images/landscape/Land4.jpg")
-			div
-				img(src="/images/landscape/Land5.jpg")
-			div
-				img(src="/images/landscape/2.jpg")
-			div
-				img(src="/images/landscape/3.jpg")
-			div
-				img(src="/images/landscape/4.jpg")
-			div
-				img(src="/images/landscape/1.jpg")
-	.container.proPage
-		p TigerTurf synthetic grass is always green, always lush. It requires no watering or mowing, so relax and enjoy. TigerTurf is experiencing dramatic growth in demand for its range of products for landscaping applications, from the home backyard to open public spaces. Our latest landscaping products have been developed specifically to harmonize with the natural environment, improving safety for children, increasing usage for the community and bringing green and durable grass surfaces to outdoor areas without the need for water, pesticides, mowing or weeding.
-		br
-		br
-	#d.section-margin
-		.container
-			.col-md-12
-				#d5
-					h3.h4 TIGERTURF FEATURES AND BENEFITS
+			.whopage
+				.section-header
+					h2.dark-text=badminton.title
+				.container.proPage
 
-					ul.ul
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	No need for watering
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	No requirement of mowing
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	No allergy-causing, grass seeds and cuttings
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	No need of fertilizers
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Lush and green 365 days a year
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Looks and feels like the real thing
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Child and pet friendly
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	UV stabilized to minimize fading
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Perfect for troublesome low light and heavy rainfall areas
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Dual savings in maintenance costs and reduction in water usage
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Fire retardant
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							|	Quality virgin fibres
+					
+			.section-header
+				.regular.container
+					div
+						img(src=badminton.image.Second)
+					div
+						img(src=badminton.image.Third)
+					div
+						img(src=badminton.image.Fourth)
+					div
+						img(src=badminton.image.Fifth)
+					div
+						img(src=badminton.image.Sixth)
+					div
+						img(src=badminton.image.Seventh)
+					div
+						img(src=badminton.image.Eighth)
+					div
+						img(src=badminton.image.Ninth)
+					div
+						img(src=badminton.image.Tenth)
+			.container.proPage
+				p=badminton.content.first
+				br
+				br
+			#d.section-margin
+				.container
+					.col-md-12
+						#d5
+							h3.h4=badminton.heading.first
+
+							ul.ul
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.second
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.third
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.fourth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.fifth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.sixth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.seventh
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.eighth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.ninth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.tenth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.eleventh
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.twelth
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=badminton.content.thirteenth
