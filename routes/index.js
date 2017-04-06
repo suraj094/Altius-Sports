@@ -152,7 +152,7 @@ exports = module.exports = function (app) {
 	app.get('/Media',function(req,res){
 		var view=new keystone.View(req,res);
 		view.query('Statics', keystone.list('static').model.find().where('name', 'media'));
-		view.render('Media')
+		view.render('media')
 	});
 
 	app.get('/fiab',function(req,res){

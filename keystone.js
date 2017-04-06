@@ -25,7 +25,9 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+
 });
+
 
 // Load your project's Models
 keystone.import('models');
