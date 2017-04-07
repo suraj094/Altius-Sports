@@ -11,10 +11,10 @@ html
 
 		//- title Altius
 		link(rel='stylesheet', href="/styles/search.css")
-		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+		link(rel="shortcut icon", href="/favicon.png", type="image/x-icon")
 		//- Customise the stylesheet for your site by editing /public/styles/site.sass
 		link(href="/styles/site.css", rel="stylesheet")
-		link(rel='shortcut icon', href="/favicon.ico", type='image/x-icon')
+		link(rel='shortcut icon', href="/favicon.png", type='image/x-icon')
 		link(rel="stylesheet", href="/styles/site.css")
 		link(href='/styles/vegas.css', rel='stylesheet')
 		link(href='/styles/style.css', rel='stylesheet')
@@ -132,14 +132,13 @@ html
 						li
 							a(href="/Contact") Contact Us
 						li
-							gcse:searchbox
-
-										
-
+							form.form-inline(role="search",action='/search',method="Get")
+							fieldset.pad
+								input.form-part2(type="text",id="keywords",name="keystone",placeholder="search")
+								<a href="/search" ><i class="fa fa-search fa-spacing ico" id = "search" area-hidden='true' type="submit"></i></a>
 								
 			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
 			//- ... or completely change this header to suit your design.
-
 			
 			
 			
@@ -169,14 +168,12 @@ html
 								li: a(href='/keystone/signout') Sign Out
 							else
 								li: a(href='/keystone/signin') Sign In
-
 		//- BODY
 		#body
 
 			//- NOTE:
 			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
 			//- Remember to include it in your templates when you override the intro and content blocks!
-
 			//- The Intro block appears above flash messages (used for temporary information display)
 			block intro
 
@@ -231,8 +228,6 @@ html
 		
 			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
 			//- p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
-
-
 		//- JAVASCRIPT
 		script.
 			(function() {
@@ -258,7 +253,6 @@ html
 				//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
 		//- which generate links to edit content for users who can access Keystone
 		
-
 		//- Add scripts that are globally required by your site here.
 		script(src='/js/jquery/vegas.min.js')
 		script(src='/js/jquery/jquery.viewportchecker.js')

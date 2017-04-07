@@ -2249,3 +2249,18 @@ left: 0px;
     position: relative;
     top: 11px;
 }
+
+/*///////////////search//////////////////*/
+#keywords{
+    margin-top: 12px;
+    border-radius: 2px;
+
+}
+.search{
+    margin-top: 40px;
+min-height: 235px;
+margin-bottom: 40px;
+}
+.result{
+    float: right;
+}

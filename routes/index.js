@@ -172,6 +172,41 @@ exports = module.exports = function (app) {
 		 view.query('contacts', keystone.list('contact').model.find());
 		view.render('Contact')
 	});
+////////////////////////////// search///////////////////////////////////////////////////
+
+	app.get('/search/:search', function(req, res){
+		console.log("working");
+		var view = new keystone.View(req, res);
+		 filters = {
+        keywords: req.query.keywords
+    };
+
+    data = {
+        product_contents:[],
+        keywords: " ",
+    };
+	
+	// console.log(search);
+	// console.log(filters.keywords.split(" "));
+		view.query('Product_contents', keystone.list('product_content').model.find(
+		  {$text: {$search : req.params.search } },
+            {score : {$meta: "textScore"} })
+			// db.collection.find({"Product_contents":{"$in":["hockey","cricket"]}}) db.collection.find({"Abouts":{"$in":["About_Us","Our_Services"]}})
+        
+      
+		);	
+		//  console.log(assets);
+		view.render('search');
+});
+// //////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
 // app.get('/search', function(req, res){
 // 		var view = new keystone.View(req, res);
 // 		 filters = {

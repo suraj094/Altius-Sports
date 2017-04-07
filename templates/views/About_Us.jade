@@ -3,6 +3,9 @@ extends ../layouts/default
 block content
     if Statics.length
         each static in Statics
+            head
+                title Altius | About Us 
+            
             .slider
                 img(src=static.image.First, alt='slider')
             .container
