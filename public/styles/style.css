@@ -674,6 +674,13 @@ width:100%!important;
 .ph-number{
     margin: 10px 0;
 }
+
+.ph-link:hover,.ph-link:active,.ph-link:visited,.ph-link:focus {
+text-decoration:none;
+}
+a.ph-link:link{
+color:#939393;
+}
 /*//////////////NavBar//////////////*/
 #main-nav{
     width: 100%;
