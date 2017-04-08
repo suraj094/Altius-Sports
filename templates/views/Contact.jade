@@ -102,7 +102,7 @@ block content
 				//- h3 Request a quote
 				#wpcf7-f56-p20-o1.wpcf7(role="form", lang="en-US", dir="ltr")
 					.screen-reader-response
-					form.wpcf7-form(action="/dev/wp/altius/contact-us/#wpcf7-f56-p20-o1", method="post", novalidate="novalidate")
+					form#form5
 						div(style="display: none;")
 							input(type="hidden", name="_wpcf7", value="56")
 							input(type="hidden", name="_wpcf7_version", value="4.6")
@@ -111,18 +111,19 @@ block content
 							input(type="hidden", name="_wpnonce", value="3716edacc7")
 						.form-group
 							span.wpcf7-form-control-wrap.text-560
-								input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.form-control(type="text", name="text-560", value="", size="40", aria-required="true", aria-invalid="false", placeholder="Name")
+								input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.form-control#cont_name(type="text", name="text-560", value="", size="40", aria-required="true", aria-invalid="false", placeholder="Name")
 						.form-group
 							span.wpcf7-form-control-wrap.email-162
-								input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email.form-control(type="email", name="email-162", value="", size="40", aria-required="true", aria-invalid="false", placeholder="Email")
+								input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email.form-control#cont_email(type="email", name="email-162", value="", size="40", aria-required="true", aria-invalid="false", placeholder="Email")
 						.form-group
 							span.wpcf7-form-control-wrap.tel-668
-								input.wpcf7-form-control.wpcf7-text.wpcf7-tel.wpcf7-validates-as-required.wpcf7-validates-as-tel.form-control(type="tel", name="tel-668", value="", size="40", aria-required="true", aria-invalid="false", placeholder="Phone")
+								input.wpcf7-form-control.wpcf7-text.wpcf7-tel.wpcf7-validates-as-required.wpcf7-validates-as-tel.form-control#cont_number(type="tel", name="tel-668", value="", size="40", aria-required="true", aria-invalid="false", placeholder="Phone")
 						.form-group
 							span.wpcf7-form-control-wrap.textarea-235
-								textarea.wpcf7-form-control.wpcf7-textarea.form-control(name="textarea-235", cols="40", rows="10", aria-invalid="false", placeholder="Message")
+								textarea.wpcf7-form-control.wpcf7-textarea.form-control#cont_message(name="textarea-235", cols="40", rows="10", aria-invalid="false", placeholder="Message")
 						p
-							input.wpcf7-form-control.wpcf7-submit.btn.btn-success(type="submit", value="submit",)
+							#return-text
+							input.wpcf7-form-control.wpcf7-submit.btn.btn-success(type="submit", value="submit", onclick = 'SUBMIT()')
 							span.ajax-loader
 						.wpcf7-response-output.wpcf7-display-none
 			
@@ -162,3 +163,4 @@ block content
 		hr
 		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
 			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
+
