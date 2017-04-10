@@ -8,7 +8,7 @@ var static = new keystone.List('static', {
 static.add({
     title: { type: String},
     name: {type: String},
-
+    page_url:{type:String},
     heading:{
          First: {type: String},
         Second: {type: String},

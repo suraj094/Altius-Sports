@@ -9,7 +9,7 @@ var badminton = new keystone.List('badminton', {
 badminton.add({
      title: { type: String},
     name: {type: String},
-
+    page_url:{type:String},
      image : {
         First: {type: String},
         Second: {type: String},

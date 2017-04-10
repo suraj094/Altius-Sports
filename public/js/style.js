@@ -3,7 +3,7 @@ $(document).ready(function(){
         e.preventDefault();
         var search =  document.getElementById('keywords').value;
         url = window.location.href.split('search');
-        window.location = 'http://148.72.248.114:3000/' + 'search/' +  search;
+        window.location = 'http://localhost:3000/' + 'search/' +  search;
     })
 });
 

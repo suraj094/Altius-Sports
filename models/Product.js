@@ -6,8 +6,10 @@ var Product = new keystone.List('product_content', {
 });
 
 Product.add({
+title:{type:String},
 name: {type: String},
 page_name:{type:String},
+page_url:{type:String},
 image:{
         first:{type: String},
         second:{type: String},

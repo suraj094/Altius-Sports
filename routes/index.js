@@ -194,6 +194,42 @@ exports = module.exports = function (app) {
 			// db.collection.find({"Product_contents":{"$in":["hockey","cricket"]}}) db.collection.find({"Abouts":{"$in":["About_Us","Our_Services"]}})
         
       
+		);
+
+		view.query('Badmintons', keystone.list('badminton').model.find(
+		  {$text: {$search : req.params.search } },
+            {score : {$meta: "textScore"} })
+		);
+
+		view.query('basems', keystone.list('Basem').model.find(
+		  {$text: {$search : req.params.search } },
+            {score : {$meta: "textScore"} })
+		);
+
+		view.query('Shockpads', keystone.list('Shockpad').model.find(
+		  {$text: {$search : req.params.search } },
+            {score : {$meta: "textScore"} })
+		);
+
+		view.query('statics', keystone.list('static').model.find(
+		  {$text: {$search : req.params.search } },
+            {score : {$meta: "textScore"} })
+		);
+				view.query('Contacts', keystone.list('contact').model.find(
+		  {$text: {$search : req.params.search } },
+            {score : {$meta: "textScore"} })
+		);
+				view.query('cases', keystone.list('case_study').model.find(
+		  {$text: {$search : req.params.search } },
+            {score : {$meta: "textScore"} })
+		);
+				view.query('Homes', keystone.list('Home').model.find(
+		  {$text: {$search : req.params.search } },
+            {score : {$meta: "textScore"} })
+		);
+				view.query('vinyls', keystone.list('Vinyls').model.find(
+		  {$text: {$search : req.params.search } },
+            {score : {$meta: "textScore"} })
 		);	
 		//  console.log(assets);
 		view.render('search');

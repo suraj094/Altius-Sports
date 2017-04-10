@@ -9,6 +9,7 @@ contact.add({
     // title: { type: String},
     name: {type: String},
     // image : {type: String},
+    page_url:{type:String},
     content: {
 		first: { type: String, wysiwyg: true, height: 400 },
         second: { type: String, wysiwyg: true, height: 400 },

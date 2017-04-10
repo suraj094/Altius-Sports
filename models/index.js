@@ -8,6 +8,7 @@ var Home = new keystone.List('Home', {
 Home.add({
     title: { type: String},
     name: {type: String},
+    page_url:{type:String},
     image : {
         first:{type: String},
         second:{type: String},

@@ -9,6 +9,8 @@ Basem.add({
     name:{
         type: String
     },
+    page_url:{type:String},
+
     image:{
         first: {type: String},
         second: {type: String},

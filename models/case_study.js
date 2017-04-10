@@ -13,6 +13,7 @@ case_study.add({
     date:{type: String},
     surface:{type: String},
     base:{type: String},
+    page_url:{type:String},
     image : {
         first: {type: String},
         Second: {type: String},
