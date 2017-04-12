@@ -2276,3 +2276,12 @@ font-size: 15px;
     font-size: 20px;
     text-align: center;
 }
+#return-text{
+width:200px;
+background-color:#585858;
+text-align:center;
+margin-left:475px;
+color:#ffffff;
+font-size:15px;
+opacity:0.7;
+}
