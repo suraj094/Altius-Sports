@@ -29,6 +29,10 @@ static.add({
         Sixth:{type: String},
         Seventh:{type: String},
         Eighth:{type: String},
+        Ninth:{type:String},
+        Tenth:{type:String},
+        Eleventh:{type:String},
+        Twelfth:{type:String}
     },
     content: {
 		first: { type: String, wysiwyg: true, height: 400 },
@@ -39,7 +43,10 @@ static.add({
         Sixth:{ type: String, wysiwyg: true, height: 400 },
         Seventh:{ type: String, wysiwyg: true, height: 400 },
         Eighth:{ type: String, wysiwyg: true, height: 400 },
-	},
+        Ninth:{ type: String, wysiwyg: true, height: 400 },
+        Tenth:{ type: String, wysiwyg: true, height: 400 },
+        Eleveth:{ type: String, wysiwyg: true, height: 400 }
+	}
 
 
 });
