@@ -30,7 +30,7 @@ var url = window.location.href;
 });
       e.preventDefault();
       $(this).get(0).reset();
-      document.getElementById('return-text').innerHTML = "* Thank You! Our program advisor will contact you soon";
+      document.getElementById('return-text-contact').innerHTML = "* Thank You! Our program advisor will contact you soon";
     //   window.location = "http://localhost:3000/products";
       window.history.go(0);
     }

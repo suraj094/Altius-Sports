@@ -2285,3 +2285,13 @@ color:#ffffff;
 font-size:15px;
 opacity:0.7;
 }
+
+#return-text-contact{
+width:100%;
+background-color:#FF5733;
+text-align:center;
+/*margin-left:475px;*/
+color:#ffffff;
+font-size: 15px;
+float:left;
+}
