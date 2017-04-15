@@ -5,16 +5,17 @@ var Home = new keystone.List('Home', {
     autokey: { from: 'title', path: 'slug' },
 });
 
+
 Home.add({
     title: { type: String},
     name: {type: String},
     page_url:{type:String},
     image : {
-        first:{type: String},
-        second:{type: String},
-        third:{type: String},
-        fourth:{type: String},
-        fiveth:{type: String},
+        one:{type: String},
+        two:{type: String},
+        three:{type: String},
+        four:{type: String},
+        five:{type: String},
         six:{type: String},
         seven:{type: String},
         eight:{type: String},
@@ -30,24 +31,24 @@ Home.add({
         otwo:{type: String},
         othree:{type: String},
 
-        Ojsfimage:{type:String},
+        Ojsfimage:{type: String},
 
-        happyimage1:{type:String},
-        happyimage2:{type:String},
-        happyimage3:{type:String},
-        happyimage4:{type:String},
-        happyimage5:{type:String},
-        happyimage6:{type:String},
+        happyimage1:{type: String},
+        happyimage2:{type: String},
+        happyimage3:{type: String},
+        happyimage4:{type: String},
+        happyimage5:{type: String},
+        happyimage6:{type: String},
 
-        Certifications1:{type:String},
-        Certifications2:{type:String},
-        Certifications3:{type:String},
-        Certifications4:{type:String},
-        Certifications5:{type:String},
-        Certifications6:{type:String},
-        Certifications7:{type:String},
-        Certifications8:{type:String},
-        Certifications9:{type:String},
+        Certifications1:{type: String},
+        Certifications2:{type: String},
+        Certifications3:{type: String},
+        Certifications4:{type: String},
+        Certifications5:{type: String},
+        Certifications6:{type: String},
+        Certifications7:{type: String},
+        Certifications8:{type: String},
+        Certifications9:{type: String}
     },        
 
 
@@ -63,7 +64,7 @@ Home.add({
         fiveth: { type: String, wysiwyg:true,height:400},
         sixth: { type: String, wysiwyg:true,height:400},
         seventh: { type: String, wysiwyg:true,height:400},
-        eightth: { type: String, wysiwyg:true,height:400},
+        eighth: { type: String, wysiwyg:true,height:400},
         nine: { type: String, wysiwyg:true,height:400},
         ten: { type: String, wysiwyg:true,height:400},
 

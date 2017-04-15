@@ -1,60 +1,60 @@
 extends ../layouts/default
 
 block content
-    if Badmintons.length
-        each badminton in Badmintons
+    if Products.length
+        each Product in Products
             head
                 title Altius | Products | Sports
             div
-                img(src=badminton.image.First, alt='football', width='100%')
+                img(src=Product.image.jumbotron_image, alt='football', width='100%')
             .container
                 .breadcram
                     a(href='/') Home
                     |  > Products  > Football
             .whopage
                 .section-header
-                    h2.dark-text=badminton.title
+                    h2.dark-text=Product.title
                 .container.proPage
                     ul#li_block4
                         li
-                            strong=badminton.heading.third
+                            strong=Product.heading.three
                         li
-                            strong=badminton.heading.fourth
+                            strong=Product.heading.four
                         li
-                            strong=badminton.heading.fifth
+                            strong=Product.heading.five
                         li
-                            strong=badminton.content.first
-                    p=badminton.content.second
+                            strong=Product.content.one
+                    p=Product.content.two
                         //- | The world's most popular sport is now played on the most advanced artificial grass surface, recognized by FIFA. But the real revolution has been to transform dust bowls and mud pits, where generations of children have learnt their football skills, into high performance, heavily used "theatres of dreams".
                     br
                     br
                 .section-header(style='padding-bottom : 10px;')
                     .regular.container(style='height : 250px;')
                         div
-                            img(src=badminton.image.Second)
+                            img(src=Product.image.one)
                         div
-                            img(src=badminton.image.Third)
+                            img(src=Product.image.two)
                         div
-                            img(src=badminton.image.Fourth)
+                            img(src=Product.image.three)
                         div
-                            img(src=badminton.image.Fifth)
+                            img(src=Product.image.four)
                         div
-                            img(src=badminton.image.Sixth)
+                            img(src=Product.image.five)
                         div
-                            img(src=badminton.image.Seventh)
+                            img(src=Product.image.six)
                         div
-                            img(src=badminton.image.Eighth)
+                            img(src=Product.image.seven)
                         div
-                            img(src=badminton.image.Ninth)
+                            img(src=Product.image.eight)
                         div
-                            img(src=badminton.image.Tenth)
+                            img(src=Product.image.nine)
             .container.proPage
-                p=badminton.content.third
+                p=Product.content.three
                     //- | You can wear flat-soled shoes and teachers, coaches and facility managers no longer need to monitor footwear!
                     strong
                         br
                         br
-                        =badminton.content.fourth
+                        =Product.content.four
                         //- | 	Ideal for heavy use futsal fields and schools.
                 br
                 br
@@ -63,43 +63,43 @@ block content
                 .container
                     .col-md-6
                         #d5
-                            h3.h4=badminton.heading.first
+                            h3.h4=Product.heading.one
                             ul.ul
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.fifth
+                                    =Product.content.five
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.sixth
+                                    =Product.content.six
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.seventh
+                                    =Product.content.seven
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.eighth
+                                    =Product.content.eight
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.ninth
+                                    =Product.content.nine
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.tenth
+                                    =Product.content.ten
                                 br
                     .col-md-6
                         #d5
-                            h3.h4(style='text-transform: uppercase;')=badminton.heading.second
+                            h3.h4(style='text-transform: uppercase;')=Product.heading.two
                         ul.ul
                             li#p6
                                 span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                =badminton.content.eleventh
+                                =Product.content.eleven
                             li#p6
                                 span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                =badminton.content.twelth
+                                =Product.content.twelve
                             li#p6
                                 span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                =badminton.content.thirteenth
+                                =Product.content.thirteen
                             li#p6
                                 span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                =badminton.content.forteenth
+                                =Product.content.fourteen
                 br
                 br
                 br

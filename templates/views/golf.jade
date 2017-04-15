@@ -1,89 +1,91 @@
 extends ../layouts/default
 
 block content
-	head
-		title Altius | Products | Leisure
-	div
-		img(src=Product_contents.image.first,alt="hockey",width="100%")
-	.container
-		.breadcram
-			<a href="/">Home</a>
-			|	&gt; Products  &gt; Golf
-	
-	.whopage
-		.section-header
-			h2(class="dark-text")=Product_contents.page_name
-		.container.proPage
-
+	if Products.length
+		each Product in Products
+			head
+				title Altius | Products | Leisure
+			div
+				img(src=Product.image.jumbotron_image,alt="hockey",width="100%")
+			.container
+				.breadcram
+					<a href="/">Home</a>
+					|	&gt; Products  &gt; Golf
 			
-	.section-header
-		.regular.container
-			div
-				img(src=Product_contents.image.second)
-			div
-				img(src=Product_contents.image.third)
-			div
-				img(src=Product_contents.image.fourth)
-			div
-				img(src=Product_contents.image.fifth)
-			div
-				img(src=Product_contents.image.six)
-			div
-				img(src=Product_contents.image.seven)
-			div
-				img(src=Product_contents.image.eight)
-			div
-				img(src=Product_contents.image.nine)
-	.container.proPage
-		p= Product_contents.content.first
-		//- Sometimes Mother Nature needs a helping hand – that’s why TigerTurf is so popular on the golf course. A maintenance free, all-weather surface that remains lush and green all year through.
-		br
-		br
-	#d.section-margin
-		.container
-			.col-md-12
-				#d5
-					h3.h4= Product_contents.content.Second
-					//-  ADVANTAGES WITH TIGERTURF
+			.whopage
+				.section-header
+					h2(class="dark-text")=Product.title
+				.container.proPage
 
-					ul.ul
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							=Product_contents.content.Third
-							//- |	Manufactured using UV resistant, texturized monofilament fibres, offering higher durability &amp; resistance to wear
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							=Product_contents.content.fourth
-							//- |	Non-directional grass that provides consistency in ball roll and bounce regardless of the direction in which the ball is putt
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							=Product_contents.content.fifth
-							//- |	Excellent ball roll speed
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							=Product_contents.content.sixth
-							//- |	Non-filled options available too that are fully adhered to provide dimensional stability
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							=Product_contents.content.seventh
-							//- |	Low maintenance which means no rolling or brushing required as opposed to filled systems
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							=Product_contents.content.eighth
-							//- |	Minimal ball bounce when chipping from a distance
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							=Product_contents.content.nine
-							//- |	Surface takes spins mimicking the best greens Augusta has to offer
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							=Product_contents.content.ten
-							//- |	 Easily contoured for putting angles &amp; breaks
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							=Product_contents.content.eleven
-							//- |	Consistent performance without need for watering, mowing, coring or spraying
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-							=Product_contents.content.twelve
-							//- |	Enhance the experience by adding a felt layer/shock pad under the green to negate ball bounce
+					
+			.section-header
+				.regular.container
+					div
+						img(src=Product.image.one)
+					div
+						img(src=Product.image.two)
+					div
+						img(src=Product.image.three)
+					div
+						img(src=Product.image.four)
+					div
+						img(src=Product.image.five)
+					div
+						img(src=Product.image.six)
+					div
+						img(src=Product.image.seven)
+					div
+						img(src=Product.image.eight)
+			.container.proPage
+				p= Product.content.one
+				//- Sometimes Mother Nature needs a helping hand – that’s why TigerTurf is so popular on the golf course. A maintenance free, all-weather surface that remains lush and green all year through.
+				br
+				br
+			#d.section-margin
+				.container
+					.col-md-12
+						#d5
+							h3.h4= Product.heading.one
+							//-  ADVANTAGES WITH TIGERTURF
+
+							ul.ul
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=Product.content.two
+									//- |	Manufactured using UV resistant, texturized monofilament fibres, offering higher durability &amp; resistance to wear
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=Product.content.three
+									//- |	Non-directional grass that provides consistency in ball roll and bounce regardless of the direction in which the ball is putt
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=Product.content.four
+									//- |	Excellent ball roll speed
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=Product.content.five
+									//- |	Non-filled options available too that are fully adhered to provide dimensional stability
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=Product.content.six
+									//- |	Low maintenance which means no rolling or brushing required as opposed to filled systems
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=Product.content.seven
+									//- |	Minimal ball bounce when chipping from a distance
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=Product.content.eight
+									//- |	Surface takes spins mimicking the best greens Augusta has to offer
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=Product.content.nine
+									//- |	 Easily contoured for putting angles &amp; breaks
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=Product.content.ten
+									//- |	Consistent performance without need for watering, mowing, coring or spraying
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
+									=Product.content.eleven
+									//- |	Enhance the experience by adding a felt layer/shock pad under the green to negate ball bounce

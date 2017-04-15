@@ -3,7 +3,7 @@ $(document).ready(function(){
         e.preventDefault();
         var search =  document.getElementById('keywords').value;
         url = window.location.href.split('search');
-        window.location = 'http://altiussports.com/' + 'search/' +  search;
+        window.location = 'http://localhost:3000/' + 'search/' +  search;
     })
 });
 
@@ -20,7 +20,7 @@ var url = window.location.href;
       return false;
     } else {
     $.ajax({
-    url: "https://mailthis.to/abhishek.nayyar93@gmail.com", 
+    url: "https://mailthis.to/info@altiussports.com", 
     method: "POST",
     data: {name: name.value,
        email: email.value,

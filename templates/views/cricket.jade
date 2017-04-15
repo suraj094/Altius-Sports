@@ -1,109 +1,111 @@
 extends ../layouts/default
 
 block content
-	head
-		title Altius | Products | Sports
-	div
-		img(src=Product_contents.image.first, width='100%')
-	.container
-		.breadcram
-			a(href='/') Home
-			|  > Products > Cricket
-	.whopage
-		.section-header
-			h2(class="dark-text")=Product_contents.page_name
-		.container.proPage
-			ul#li_block4
-				li
-					strong=Product_contents.content.first
-						// Only cricket wickets certified by England and Wales Cricket Board
-			// <div class = "content-products">
-			p=Product_contents.content.Second
-				//- | As a former international cricketer, Graham Vivian, the founder of TigerTurf NZ Ltd, could see the potential for
-				//- | synthetic grass cricket wickets. TigerTurf has
-				//- | developed a range of tufted polypropylene artificial grass wickets and
-				//- | has more than 20,000 synthetic cricket wickets installed the world over.
-	.section-header
-		.regular.container
+	if Products.length
+		each Product in Products
+			head
+				title Altius | Products | Sports
 			div
-				img(src=Product_contents.image.second)
-			div
-				img(src=Product_contents.image.third)
-			div
-				img(src=Product_contents.image.fourth)
-			div
-				img(src=Product_contents.image.fifth)
-				
-	#d.section-margin
-		.container
-			.col-md-6
-				#d5
-					h3.h4=Product_contents.content.Third 
-						//THE RIGHT PITCH
-					ul.ul
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.fourth
-							//- |                          Developed in consultation with top players and administrators
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.fifth
-							//- |                           A range of wickets to suit every playing level
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.sixth
-							//- |                         Affordable to schools and clubs
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.seventh
-							//- |                         Consistent and even surface with fantastic ball bounce and turn
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.eighth
-							|                         All weather, quick drying
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.nine
-							|                         Low maintenance
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.ten
-							//- |                         Extremely hardwearing and durable
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.eleven
-							//- |                         Ideal for both indoor and outdoor cricket
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.twelve
-							//- |                         Run-up Wickets & Roll-out Wickets available too
-			.col-md-6
-				#d5
-					h3.h4=Product_contents.content.thirteen
-					//- TigerTurf OUTFIELD
-					ul.ul
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.fourteen
-							//- |                           Fast draining, structured over a dynamic base
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.fifteen
-							//- | Non-abrasive and durable polyethylene yarn – no skin burn
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.sixteen
-							//- |                           In-fill of TPE (green, natural rubber) that means no smell and less heat absorption
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.seventeen
-							//- |                           Medium pile height thus tall enough to absorb shock yet short enough to allow the ball to race to the boundary
-						li#p6
-							span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-							=Product_contents.content.eighteen
-							//- |                         Infill allows players to slide and dive without risk of injury
-		br
-		br
-		br
-		br
-	
+				img(src=Product.image.jumbotron_image, width='100%')
+			.container
+				.breadcram
+					a(href='/') Home
+					|  > Products > Cricket
+			.whopage
+				.section-header
+					h2(class="dark-text")=Product.title
+				.container.proPage
+					ul#li_block4
+						li
+							strong=Product.heading.one
+								// Only cricket wickets certified by England and Wales Cricket Board
+					// <div class = "content-products">
+					p=Product.content.one
+						//- | As a former international cricketer, Graham Vivian, the founder of TigerTurf NZ Ltd, could see the potential for
+						//- | synthetic grass cricket wickets. TigerTurf has
+						//- | developed a range of tufted polypropylene artificial grass wickets and
+						//- | has more than 20,000 synthetic cricket wickets installed the world over.
+			.section-header
+				.regular.container
+					div
+						img(src=Product.image.one)
+					div
+						img(src=Product.image.two)
+					div
+						img(src=Product.image.three)
+					div
+						img(src=Product.image.four)
+						
+			#d.section-margin
+				.container
+					.col-md-6
+						#d5
+							h3.h4=Product.heading.two 
+								//THE RIGHT PITCH
+							ul.ul
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.two
+									//- |                          Developed in consultation with top players and administrators
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.three
+									//- |                           A range of wickets to suit every playing level
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.four
+									//- |                         Affordable to schools and clubs
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.five
+									//- |                         Consistent and even surface with fantastic ball bounce and turn
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.six
+									|                         All weather, quick drying
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.seven
+									|                         Low maintenance
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.eight
+									//- |                         Extremely hardwearing and durable
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.nine
+									//- |                         Ideal for both indoor and outdoor cricket
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.ten
+									//- |                         Run-up Wickets & Roll-out Wickets available too
+					.col-md-6
+						#d5
+							h3.h4=Product.heading.three
+							//- TigerTurf OUTFIELD
+							ul.ul
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.eleven
+									//- |                           Fast draining, structured over a dynamic base
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.twelve
+									//- | Non-abrasive and durable polyethylene yarn – no skin burn
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.thirteen
+									//- |                           In-fill of TPE (green, natural rubber) that means no smell and less heat absorption
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.fourteen
+									//- |                           Medium pile height thus tall enough to absorb shock yet short enough to allow the ball to race to the boundary
+								li#p6
+									span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
+									=Product.content.fifteen
+									//- |                         Infill allows players to slide and dive without risk of injury
+				br
+				br
+				br
+				br
+			

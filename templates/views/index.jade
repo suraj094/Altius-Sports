@@ -20,13 +20,13 @@ block content
 										//- p(class="moving-text")=Home.content.fourth
 						.item
 							.carousel-content
-								p(class="moving-text")= Home.content.Second
+								p(class="moving-text")=Home.content.Second
 						.item
 							.carousel-content
-								p.moving-text Delivering a twelve-month season, rain or shine.
+								p(class="moving-text")=Home.content.Third
 						.item
 							.carousel-content
-								p.moving-text Fast pitches, true ball roll and increased player safety.
+								p(class="moving-text")=Home.content.fourth
 	.container-color.section-margin(style='padding-top : 125px;')
 		.container
 			.section-header
@@ -46,17 +46,17 @@ block content
 				.section-header(style='padding-bottom : 21.5px;')
 					//- if Homes.length
 						each Home in Homes
-					h2(class="dark-text ")=Home.content.eightth
+					h2(class="dark-text ")=Home.content.eighth
 				.fancySlide.invisible-xs
 					#carousel.dg-container(style='margin-top : 50px;')
-						img(width='473', height='343', src=Home.image.first, alt='projects-3')
-						img(width='473', height='343', src=Home.image.second, alt='projects-2')
-						img(width='473', height='343', src=Home.image.third, alt='projects-1')
+						img(width='473', height='343', src=Home.image.one, alt='projects-3')
+						img(width='473', height='343', src=Home.image.two, alt='projects-2')
+						img(width='473', height='343', src=Home.image.three, alt='projects-1')
 					.container
 						.fancySlide.visible-xtra
-							img.fancySlide-img(src=Home.image.first, alt='projects-3')
-							img.fancySlide-img(src=Home.image.second, alt='projects-2')
-							img.fancySlide-img(src=Home.image.third, alt='projects-1')
+							img.fancySlide-img(src=Home.image.one, alt='projects-3')
+							img.fancySlide-img(src=Home.image.two, alt='projects-2')
+							img.fancySlide-img(src=Home.image.three, alt='projects-1')
 			section#works.works.section-margin
 				.container
 					.section-header
@@ -67,13 +67,13 @@ block content
 							.loader-icon
 						#portfolio-list.col-xs-6.col-sm-3.port-left
 							.hovereffect
-								img(width='320', height='200', src=Home.image.fourth, class='.img-responsive')
+								img(width='320', height='200', src=Home.image.four, class='.img-responsive')
 								.overlay
 									.innertext
 										h2=Home.content.pfirst
 						#portfolio-list.col-xs-6.col-sm-3.port-up
 							.hovereffect
-								img(width='320', height='200', src=Home.image.fiveth, class='.img-responsive')
+								img(width='320', height='200', src=Home.image.five, class='.img-responsive')
 								.overlay
 									.innertext
 										h2=Home.content.psecond

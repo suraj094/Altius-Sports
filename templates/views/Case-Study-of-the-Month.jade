@@ -3,12 +3,12 @@ extends ../layouts/default
 
 block content
 	.slider
-		if Case_studies.length
-			each case_study in Case_studies
+		if Case_Studies.length
+			each case_study in Case_Studies
 				head 
 					title Altius | Case Study of the Month
 
-				img(src=case_study.image.first, alt='slider')
+				img(src=case_study.image.jumbotron_image, alt='slider')
 	.container
 		.breadcram
 			a(href='/') Home
@@ -16,33 +16,33 @@ block content
 		.whopage
 
 			.section-header
-				if Case_studies.length
-					each case_study in Case_studies
+				if Case_Studies.length
+					each case_study in Case_Studies
 						h2(class="dark-text")= case_study.title
 			.container.proPage
 				.container
-					if Case_studies.length
-						each case_study in Case_studies
-							h5=case_study.vanue
+					if Case_Studies.length
+						each case_study in Case_Studies
+							h5=case_study.venue
 							P=case_study.describe
 								
 							br
 				.row
 					.container.products_list
-						if Case_studies.length
-							each case_study in Case_studies
+						if Case_Studies.length
+							each case_study in Case_Studies
 								ul
 									li
 										a(href='#')
-											img(src=case_study.image.Second)
+											img(src=case_study.image.one)
 									li
 										a(href='#')
-											img(src=case_study.image.Third)
+											img(src=case_study.image.two)
 									li
 										a(href='#')
-											img(src=case_study.image.Fourth)
-					if Case_studies.length
-						each case_study in Case_studies
+											img(src=case_study.image.three)
+					if Case_Studies.length
+						each case_study in Case_Studies
 							p
 								strong Date of project completion :
 								=case_study.Date
@@ -54,6 +54,7 @@ block content
 								=case_study.base
 							br
 							
-							p=case_study.content.first
-							p=case_study.content.second
-							p=case_study.content.third
+							p=case_study.content.one
+							p=case_study.content.two
+							p=case_study.content.three
+							p=case_study.content.four

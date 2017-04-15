@@ -1,46 +1,46 @@
 extends ../layouts/default
 
 block content
-    if Badmintons.length
-        each badminton in Badmintons
+    if Products.length
+        each Product in Products
             head
                 title Altius | Products | Sports
             div
-                img(src=badminton.image.First, alt='Tennis', width='100%')
+                img(src=Product.image.jumbotron_image, alt='Tennis', width='100%')
             .container
                 .breadcram
                     a(href='/') Home
                     |  > Products  > Tennis
             .whopage
                 .section-header
-                    h2.dark-text=badminton.title
+                    h2.dark-text=Product.title
             .container.proPage
                 ul#li_block4
                     li
-                        strong=badminton.heading.first
+                        strong=Product.heading.one
                     li
-                        strong=badminton.heading.second
+                        strong=Product.heading.two
                     li
-                        strong=badminton.heading.third
+                        strong=Product.heading.three
                 br
                 br
             .section-header
                 .regular.container
                     div
-                        img(src=badminton.image.Second)
+                        img(src=Product.image.one)
                     div
-                        img(src=badminton.image.Third)
+                        img(src=Product.image.two)
                     div
-                        img(src=badminton.image.Fourth)
+                        img(src=Product.image.three)
                     div
-                        img(src=badminton.image.Fifth)
+                        img(src=Product.image.four)
                     div
-                        img(src=badminton.image.Sixth)
+                        img(src=Product.image.five)
                     div
-                        img(src=badminton.image.Seventh)
+                        img(src=Product.image.six)
             
             .container.proPage
-                p=badminton.content.first
+                p=Product.content.one
                     //- | ITF certified TigerTurf is simply a more professional playing surface, designed in consultation with the best players and engineered to keep them at the top of their game. Not only that, we have a range of speeds to suit every playing need. From comfort to speed, from rallies to serve and volley, TigerTurf is the Ace when it comes to tennis!
                 p
                     br
@@ -50,72 +50,72 @@ block content
                 .container
                     .col-md-6
                         #d5
-                            h3.h4=badminton.heading.fourth
+                            h3.h4=Product.heading.four
                             ul.ul
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.second
+                                    =Product.content.two
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.third
+                                    =Product.content.three
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.fourth
+                                    =Product.content.four
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.fifth
+                                    =Product.content.five
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.sixth
+                                    =Product.content.six
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.seventh
+                                    =Product.content.seven
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.eighth
+                                    =Product.content.eight
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.ninth
+                                    =Product.content.nine
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.tenth
+                                    =Product.content.ten
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.eleventh
+                                    =Product.content.eleven
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.twelth
+                                    =Product.content.twelve
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.thirteenth
+                                    =Product.content.thirteen
                     .col-md-6
                         #d5
-                            h3.h4=badminton.heading.fifth
+                            h3.h4=Product.heading.five
                             ul.ul
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.forteenth
+                                    =Product.content.fourteen
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.fifteenth
+                                    =Product.content.fifteen
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.sixteenth
+                                    =Product.content.sixteen
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.seventeenth
+                                    =Product.content.seventeen
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.eighteenth
+                                    =Product.content.eightteen
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.ninteenth
+                                    =Product.content.nineteen
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.twenteith
+                                    =Product.content.twenty
                                 li#p6
                                     span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                    =badminton.content.twentyfirst
+                                    =Product.content.twentyone
                 br
                 br
                 br

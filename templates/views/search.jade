@@ -7,74 +7,57 @@ block content
                 span <b> Your Search results for : 
                     span#find_word 
                 span.result<b> Number of results found: 
-                    span=(Product_contents.length + Badmintons.length + basems.length + cases.length + Homes.length + Shockpads.length + statics.length + vinyls.length)
+                    span=(Products.length + Contacts.length + cases.length + Homes.length + Fiab.length + Media.length + Pay.length)
                     //- span=Product_contents.length
             br
-            if(Product_contents.length + Badmintons.length + basems.length + cases.length + Homes.length + Shockpads.length + statics.length + vinyls.length > 0)
-                if Product_contents.length
-                    each product_content in Product_contents
-                        
-                        a(href=product_content.page_url)=product_content.page_name
-                            p=product_content.title
-                        p=product_content.content.first
+            if(Products.length + Contacts.length + cases.length + Homes.length + Fiab.length + Media.length + Pay.length )
+                if (Products.length)
+                    each Product in Products
+                        a(href=Product.page_url)=Product.title
+                        p=Product.content.one
                         hr.horizontal
-                if basems.length
-                    each basem in basems
-                        
-                        a(href=basem.page_url)=basem.page_name
-                            p=basem.title
-                        p=basem.content.first
-                        hr.horizontal
-                if Shockpads.length
-                    each shockpad in Shockpads
-                        
-                        a(href=shockpad.page_url)=shockpad.page_name
-                            p=shockpad.title
-                        p=shockpad.content.first
-                        hr.horizontal
-                if statics.length
-                    each static in statics
-                        
-                        a(href=static.page_url)=static.page_name
-                            p=static.title
-                        p=static.content.first
-                        hr.horizontal
-                if Contacts.length
+
+                if (Contacts.length)
                     each Contact in Contacts
-                        
-                        a(href=Contact.page_url)=Contact.page_name
-                            p=Contact.title
-                        p=Contact.content.first
+                        a(href=Contact.page_url)=Contact.title
+                        p=Contact.content.one
                         hr.horizontal
-                if cases.length
+                if (cases.length)
                     each casey in cases
-                        
-                        a(href=casey.page_url)=casey.page_name
-                            p=casey.title
-                        p=casey.content.first
+                        a(href=casey.page_url)=casey.title
+                        p=casey.content.one
                         hr.horizontal
-                if Homes.length
+                if (Homes.length)
                     each home in Homes
                         
-                        a(href=home.page_url)=home.page_name
-                            p=home.title
-                        p=home.content.first
+                        a(href=home.page_url)=home.title
+                        p=home.content.sixth
                         hr.horizontal
-                if vinyls.length
-                    each vinyl in vinyls
-                        
-                        a(href=vinyl.page_url)=vinyl.page_name
-                            p=vinyl.title
-                        p=vinyl.content.first
+
+                if Fiab.length
+                    each fiab in Fiab
+                        a(href=fiab.page_url)=fiab.title
+                        p=fiab.content.one
                         hr.horizontal
-                if Badmintons.length
-                    each badminton in Badmintons
+                if Media.length
+                    each media in Media
                         
-                        a(href=badminton.page_url)=badminton.page_name
-                            p=badminton.title
-                        p=badminton.content.first
+                        a(href=media.page_url)=media.title
+                        p=media.description.one
+                        hr.horizontal
+                if Pay.length
+                    each pay in Pay
+                        
+                        a(href=pay.page_url)=pay.title
+                        p=pay.content.one
+                        hr.horizontal
+                //- if (Service.length)
+                //-     each service in Service
+                //-         a(href=service.page_url)=service.title
+                //-         p=service.content.one
+                //-         hr.horizontal
             else
-                p.noSearch Result Not Found
+                p.noResult Result Not Found !
             script.
                 var url = window.location.href.split("search/");
                 word = url[url.length-1].split("%20");

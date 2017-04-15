@@ -1,30 +1,30 @@
 extends ../layouts/default
 
 block content
-    if Statics.length
-        each static in Statics
+    if Abouts.length
+        each about in Abouts
             head
                 title Altius | About Us 
             
             .slider
-                img(src=static.image.First, alt='slider')
+                img(src=about.image.jumbotron_image, alt='slider')
             .container
                 .breadcram
                     a(href='/') Home
                     |  > About Altius
             .whopage   
                 .section-header
-                    h2.dark-text=static.title
+                    h2.dark-text=about.title
                 
                 .container.proPage
-                    p=static.content.first
+                    p=about.content.one
                            
-                    p=static.content.second
+                    p=about.content.two
                             
-                    p=static.content.third
+                    p=about.content.three
                             
                     br
                     .side
-                            h5=static.content.fourth 
+                            h5=about.content.four 
                            
 

@@ -1,64 +1,64 @@
 extends ../layouts/default
 
 block content
-	if Statics.length
-		each static in Statics
+	if Media.length
+		each media in Media
 			head
 				title Media
 			.slider
-				img(src=static.image.First, alt="slider")
+				img(src=media.image.jumbotron_image, alt="slider")
 			.container
 				.breadcram
 					a(href="/") Home
 					| &gt; Media
 			.whopage
 				.section-header
-					h2.dark-text=static.title
+					h2.dark-text=media.title
 				.container.my-cont
 					.c-box
 						ul.ourser.sanju
 							li
 								a(href="../images/media_pdf/Sports-Turf-Market-Growth-to-Exceed-11-by-2019-Driven-by-Artificial-Turf-Sales.pdf", target="_blank")
-									img(src=static.image.Second, alt="n5")
-								p.content-san=static.content.first
+									img(src=media.image.one, alt="n5")
+								p.content-san=media.description.one
 							li
 								a(href="../images/media_pdf/Shivalik-Public-School.pdf", target="_blank")
-									img(src=static.image.Third, alt="n4")
-								p.content-san=static.content.second
+									img(src=media.image.two, alt="n4")
+								p.content-san=media.description.two
 							li
 								a(href="../images/media_pdf/Reliance-Foundation-Youth-Sports-Embarks-Upon-Creating-Unified-Sports-Culture-For-India-_-The-North-East-Trailblazer.pdf", target="_blank")
-									img(src=static.image.Fourth, alt="n3")
-								p.content-san=static.content.third
+									img(src=media.image.three, alt="n3")
+								p.content-san=media.description.three
 							li
 								a(href="../images/media_pdf/Kolkata-slum-kids-battle-it-out-for-GÇÿWorld-CupGÇÖ-berth-Times-of-India.pdf", target="_blank")
-									img(src=static.image.Fifth, alt="n2")
-								p.content-san=static.content.fourth
+									img(src=media.image.four, alt="n2")
+								p.content-san=media.description.four
 							li
 								a(href="../images/media_pdf/Jio-Gardens.pdf", target="_blank")
-									img(src=static.image.Sixth, alt="n1")
-								p.content-san=static.content.Fifth
+									img(src=media.image.five, alt="n1")
+								p.content-san=media.description.five
 							li
 								a(href="https://toistudent.timesofindia.indiatimes.com/schoolpage.aspx?stdid=4524", target="_blank")
-									img(src=static.image.Seventh, alt="n1")
-								p.content-san=static.content.Sixth
+									img(src=media.image.six, alt="n1")
+								p.content-san=media.description.six
 							li
 								a(href="http://www.stuff.co.nz/nelson-mail/news/73667573/Rainbow-coloured-tiger-turf-at-Hampden-Street-School", target="_blank")
-									img(src=static.image.Eighth, alt="n1")
-								p.content-san=static.content.Seventh
+									img(src=media.image.seven, alt="n1")
+								p.content-san=media.description.seven
 							li
 								a(href="https://m.qt.com.au/news/top-players-preparing-for-tigerturf-battles/3141070/", target="_blank")
-									img(src=static.image.Nineth, alt="n1")
-								p.content-san=static.content.Eighth								
-							li
-								a(href="http://www.salemnews.com/sports/tiger-s-turf-ipswich-s-defense-stifles-clippers-on-new/article_027c1b6f-1ba2-5b81-a131-abbb53afbbd4.html", target="_blank")
-									img(src=static.image.Tenth, alt="n1")
-								p.content-san=static.content.Ninth
+									img(src=media.image.eight, alt="n1")
+								p.content-san=media.description.eight								
+							//- li
+							//- 	a(href="http://www.salemnews.com/sports/tiger-s-turf-ipswich-s-defense-stifles-clippers-on-new/article_027c1b6f-1ba2-5b81-a131-abbb53afbbd4.html", target="_blank")
+							//- 		img(src=media.image.nine, alt="n1")
+							//- 	p.content-san=static.content.Ninth
 							li
 								a(href="http://gisborneherald.co.nz/localsport/2399529-135/havelock-north-bowls-team-win-winter", target="_blank")
-									img(src=static.image.Eleveth, alt="n1")
-								p.content-san=static.content.Tenth
-							li
-								a(href="http://prwire.com.au/pr/65460/tigerturf-delights-players-with-all-season-bowling-greens", target="_blank")
-									img(src=static.image.Twelfth, alt="n1")
-								p.content-san=static.content.Eleveth
+									img(src=media.image.ten, alt="n1")
+								p.content-san=media.description.ten
+							//- li
+							//- 	a(href="http://prwire.com.au/pr/65460/tigerturf-delights-players-with-all-season-bowling-greens", target="_blank")
+							//- 		img(src=media.image.eleven, alt="n1")
+							//- 	p.content-san=static.content.Eleveth
 								

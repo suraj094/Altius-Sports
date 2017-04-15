@@ -1,88 +1,90 @@
 extends ../layouts/default
 
 block content
-    if Badmintons.length
-        each badminton in Badmintons
+    if Products.length
+        each Product in Products
             body
                 head
                     title Altius | Products | Sports
                 .slider
-                    img(src=badminton.image.First, alt='slider')
+                    img(src=Product.image.jumbotron_image, alt='slider')
                 .container
                     .breadcram
                     a(href='/') Home
                     |  > Products > Badminton
                 .whopage
                 .section-header
-                    h2.dark-text=badminton.title
+                    h2.dark-text=Product.title
                 .container.proPage
-                    p=badminton.content.first
+                    p=Product.content.one
                 .section-header
                     .regular.container
+                        
+                           
                         div
-                            img(src=badminton.image.Second)
+                            img(src=Product.image.one)
                         div
-                            img(src=badminton.image.Third)
+                            img(src=Product.image.two)
                         div
-                            img(src=badminton.image.Fourth)
+                            img(src=Product.image.three)
                         div
-                            img(src=badminton.image.Fifth)
+                            img(src=Product.image.four)
                         div
-                            img(src=badminton.image.Sixth)
+                            img(src=Product.image.five)
                         
                     //- Block2
                 #d.section-margin
                     .container
                         .col-md-6
                             #d5
-                                h3.h4=badminton.heading.first
+                                h3.h4=Product.heading.one
                                 ul.ul
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.second
+                                        =Product.content.two
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.third
+                                        =Product.content.three
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.fourth
+                                        =Product.content.four
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.fifth
+                                        =Product.content.five
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.sixth
+                                        =Product.content.six
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.seventh
+                                        =Product.content.seven
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.eighth
+                                        =Product.content.eight
                         .col-md-6
                             #d5
-                                h3.h4=badminton.heading.second
+                                h3.h4=Product.heading.two
                                 ul.ul
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.ninth
+                                        =Product.content.nine
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.tenth
+                                        =Product.content.ten
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.eleventh
+                                        =Product.content.eleven
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.twelth
+                                        =Product.content.twelve
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.thirteenth
+                                        =Product.content.thirteen
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.forteenth
+                                        =Product.content.fourteen
                                     li#p6
                                         span#p1.fa.fa-check.fa-spacing(aria-hidden='true')
-                                        =badminton.content.fifteenth
+                                        =Product.content.fifteen
                     br
                     br
                     br

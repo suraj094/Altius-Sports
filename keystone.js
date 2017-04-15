@@ -15,7 +15,7 @@ keystone.init({
 
 	'sass': 'public',
 	'static': 'public',
-	'favicon': 'public/favicon.ico',
+	'favicon': 'public/favicon.png',
 	'views': 'templates/views',
 	'view engine': 'jade',
 
@@ -71,7 +71,20 @@ keystone.set('email tests', require('./routes/emails'));
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
 	users: 'users',
-});
+	Home:'Home',
+	AboutUs:{
+		AboutAltius:'About',
+		OurServices:'Service',
+		CaseStudy:'case_Study'
+	},
+	Products:'Product',
+	Media:'Media',
+	FieldInBox:'fiab',
+	PayAndPlay:'Paynplay',
+	ContactUs:'contact_us'
+}
+
+);
 
 // Start Keystone to connect to your database and initialise the web server
 

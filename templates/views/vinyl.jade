@@ -1,12 +1,12 @@
 extends ../layouts/default
 
 block content
-	if Vinyls.length
-		each Vinyl in Vinyls
+	if Products.length
+		each Product in Products
 			head
 				title  Altius | Products | Other Products
 			div
-				img(src=Vinyl.image.first,alt="Vinyl Flooring",width="100%")
+				img(src=Product.image.jumbotron_image,alt="Vinyl Flooring",width="100%")
 			.container
 				.breadcram
 					<a href="/">Home</a>
@@ -14,7 +14,7 @@ block content
 			
 			.whopage
 				.section-header
-					h2.dark-text=Vinyl.heading.first
+					h2.dark-text=Product.title
 				.container.proPage
 					p.dark-text Salient features
 					ul#li_block4 
@@ -26,21 +26,21 @@ block content
 			.section-header
 				.regular.container
 					div
-						img(src=Vinyl.image.second)
+						img(src=Product.image.one)
 					div
-						img(src=Vinyl.image.third)
+						img(src=Product.image.two)
 					div
-						img(src=Vinyl.image.fourth)
+						img(src=Product.image.three)
 					div
-						img(src=Vinyl.image.fifth)
+						img(src=Product.image.four)
 					div
-						img(src=Vinyl.image.sixth)
+						img(src=Product.image.five)
 					
 						
 			.container.proPage
-				p=Vinyl.content.first
+				p=Product.content.one
 					br
-				p=Vinyl.content.second  
+				p=Product.content.two  
 				br
 				br
 	

@@ -1,12 +1,12 @@
 extends ../layouts/default
 
 block content
-	if Badmintons.length
-		each badminton in Badmintons
+	if Products.length
+		each Product in Products
 			head
 				title Altius | Products | Leisure
 			div
-				img(src=badminton.image.First,alt="hockey",width="100%")
+				img(src=Product.image.jumbotron_image,alt="hockey",width="100%")
 			.container
 				.breadcram
 					<a href="/">Home</a>
@@ -14,35 +14,35 @@ block content
 			
 			.whopage
 				.section-header
-					h2.dark-text=badminton.title
+					h2.dark-text=Product.title
 				.container.proPage
 
 					ul#li_block4
 						li
-							strong=badminton.heading.first
+							strong=Product.heading.one
 						li
-							strong=badminton.heading.second
+							strong=Product.heading.two
 						li
-							strong=badminton.heading.third
+							strong=Product.heading.three
 			.section-header
 				.regular.container
 					div
-						img(src=badminton.image.Second)
+						img(src=Product.image.one)
 					div
-						img(src=badminton.image.Third)
+						img(src=Product.image.two)
 					div
-						img(src=badminton.image.Fourth)
+						img(src=Product.image.three)
 					div
-						img(src=badminton.image.Fifth)
+						img(src=Product.image.four)
 					div
-						img(src=badminton.image.Sixth)
+						img(src=Product.image.five)
 					div
-						img(src=badminton.image.Seventh)
+						img(src=Product.image.six)
 					div
-						img(src=badminton.image.Eighth)
+						img(src=Product.image.seven)
 			
 			.container.proPage
-				p=badminton.content.first
+				p=Product.content.one
 				//-  Safe, soft, durable and an inviting playing surface – that’s what TigerTurf synthetic surfaces are when it comes to Kindergartens. Creatively installed, it can transform your playground into an area that maximizes fun, minimizes injury and promotes play and activity all day whatever the weather.What is more, with our TigerPads, that are high in compressive strength and have no permanent deformation, you can have a surface conforming to the most rigourous fall-height criterion.
 				br
 			
@@ -50,53 +50,53 @@ block content
 				.container
 					.col-md-6
 						#d5
-							h3.h4=badminton.heading.fourth
+							h3.h4=Product.heading.four
 
 							ul.ul
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.second
+									=Product.content.two
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.third
+									=Product.content.three
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.fourth
+									=Product.content.four
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.fifth
+									=Product.content.five
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.sixth
+									=Product.content.six
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.seventh
+									=Product.content.seven
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.eighth
+									=Product.content.eight
 					.col-md-6
 						#d5
-							h3.h4=badminton.heading.fifth
+							h3.h4=Product.heading.five
 
 							ul.ul
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.ninth
+									=Product.content.nine
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.tenth
+									=Product.content.ten
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.eleventh
+									=Product.content.eleven
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.twelth
+									=Product.content.twelve
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.thirteenth
+									=Product.content.thirteen
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.forteenth
+									=Product.content.fourteen
 								li#p6
 									span#p1.fa.fa-check.fa-spacing(aria-hidden="true")
-									=badminton.content.fifteenth
+									=Product.content.fifteen

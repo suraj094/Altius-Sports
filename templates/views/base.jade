@@ -1,12 +1,12 @@
 extends ../layouts/default
 
 block content
-	if Basems.length
-		each Basem in Basems
+	if Products.length
+		each Product in Products
 			head
 				title  Altius | Products | Other Products
 			div
-				img(src=Basem.image.first,alt="Base Systems",width="100%")
+				img(src=Product.image.jumbotron_image,alt="Base Systems",width="100%")
 			.container
 				.breadcram
 					<a href="/">Home</a>
@@ -14,7 +14,7 @@ block content
 			
 			.whopage
 				.section-header
-					h2.dark-text=Basem.heading.first
+					h2.dark-text=Product.title
 				//- .container.proPage
 					p.dark-text Salient features
 					ul#li_block4 
@@ -26,13 +26,13 @@ block content
 			.section-header
 				.regular.container
 					div
-						img(src=Basem.image.second)
+						img(src=Product.image.one)
 					div
-						img(src=Basem.image.third)
+						img(src=Product.image.two)
 					div
-						img(src=Basem.image.fourth)
+						img(src=Product.image.three)
 					div
-						img(src=Basem.image.fifth)
+						img(src=Product.image.four)
 					
 			a.anchor		
 				.container.proPage
@@ -40,47 +40,46 @@ block content
 						a.anchor
 							i.fa.fa-check.fa-2x.base-section &nbsp;&nbsp;
 							
-							span.h4=Basem.heading.second
-						p(style="text-align:left;color:#167AA3;font-weight:bold")=Basem.content.first
+							span.h4=Product.heading.one
+						p(style="text-align:left;color:#167AA3;font-weight:bold")=Product.content.one
 						.container.products_list
 							ul.clearfix
 								li
 									a(href="#")
-										img.oth-images(src=Basem.image.sixth)
+										img.oth-images(src=Product.image.five)
 								li
 									a(href="#")
-										img.oth-images(src=Basem.image.seventh)
+										img.oth-images(src=Product.image.six)
 					hr
 					
 					section#accorder.container
 						
 							i.fa.fa-check.fa-2x.base-section &nbsp;&nbsp;
 
-							span.h4=Basem.heading.third 
-						p(style="text-align:left;color:#167AA3;font-weight:bold") TenCate Accorder is a geotextile laid by TigerTurf as part of our base construction. It stabilizes most soils effectively, without the need for deep base construction. As there is no need for
-							| deep excavation, less soil will be removed from the site, and hence, less aggregate will be trucked onto the site, so less expensive soil types can be used in the construction of the base.
+							span.h4=Product.heading.two
+						p(style="text-align:left;color:#167AA3;font-weight:bold")=Product.content.two
 						.container.products_list
 							ul.clearfix
 								li
 									a(href="#")
-										img.oth-images(src=Basem.image.eight)
+										img.oth-images(src=Product.image.seven)
 								li
 									a(href="#")
-										img.oth-images(src=Basem.image.nine)
+										img.oth-images(src=Product.image.eight)
 					hr
 					
 					section#sine.container
 						
 							i.fa.fa-check.fa-2x.base-section &nbsp;&nbsp;
 
-							span.h4=Basem.heading.fourth
-						p(style="text-align:left;color:#167AA3;font-weight:bold") TenCate Sine is a shock pad now used by TigerTurf that is made of cross-linked, closed cell polyethylene foam with a woven loop construction. It has been engineered to improve the technical performance of our sports turfs, along with providing effective drainage in both vertical and horizontal directions
+							span.h4=Product.heading.three
+						p(style="text-align:left;color:#167AA3;font-weight:bold")=Product.content.three
 							
 						.container.products_list
 							ul.clearfix
 								li
 									a(href="#")
-										img.oth-images(src=Basem.image.tenth)
+										img.oth-images(src=Product.image.nine)
 								li
 									a(href="#")
-										img.oth-images(src=Basem.image.eleventh)
+										img.oth-images(src=Product.image.ten)

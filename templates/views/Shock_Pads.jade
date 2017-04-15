@@ -1,13 +1,13 @@
 extends ../layouts/default
 
 block content
-	if Shockpads.length
-		each Shockpad in Shockpads
+	if Products.length
+		each Product in Products
 			head
 				title  Altius | Products | Other Products
 
 			div
-				img(src=Shockpad.image.first,alt="Shock Pad",width="100%")
+				img(src=Product.image.jumbotron_image,alt="Shock Pad",width="100%")
 			.container
 				.breadcram
 					<a href="/">Home</a>
@@ -15,7 +15,7 @@ block content
 			
 			.whopage
 				.section-header
-					h2.dark-text=Shockpad.heading.first
+					h2.dark-text=Product.title
 				//- .container.proPage
 					p.dark-text Salient features
 					ul#li_block4 
@@ -27,25 +27,25 @@ block content
 			.section-header
 				.regular.container
 					div
-						img(src=Shockpad.image.second)
+						img(src=Product.image.one)
 					div
-						img(src=Shockpad.image.third)
+						img(src=Product.image.two)
 					div
-						img(src=Shockpad.image.fourth)
+						img(src=Product.image.three)
 					div
-						img(src=Shockpad.image.fifth)
+						img(src=Product.image.four)
 					div
-						img(src=Shockpad.image.sixth)
+						img(src=Product.image.five)
 					
 						
 			.container.proPage
 				p.h6(style="font-size:16px")
-					strong=Shockpad.heading.second
+					strong=Product.heading.one
 				
-				p(style="margin-top:30px")=Shockpad.content.first
+				p(style="margin-top:30px")=Product.content.one
 				
 				p.h6(style="margin-top:30px")
-					strong=Shockpad.heading.third
+					strong=Product.heading.two
 
 				br
 
@@ -57,7 +57,7 @@ block content
 
 
 				p.h6(style="margin-top:30px")
-					strong=Shockpad.heading.fourth
+					strong=Product.heading.three
 
 				br
 
@@ -78,12 +78,12 @@ block content
 				hr
 
 				p.h6(style="font-size:16px")
-					strong=Shockpad.heading.fifth
+					strong=Product.heading.four
 
-				p(style="margin-top:30px")=Shockpad.content.second
+				p(style="margin-top:30px")=Product.content.two
 				
 				p.h6(style="margin-top:30px")
-					strong=Shockpad.heading.sixth
+					strong=Product.heading.five
 
 				br
 
@@ -94,7 +94,7 @@ block content
 				hr
 
 				p.h6(style="font-size:16px")
-					strong=Shockpad.heading.seventh
+					strong=Product.heading.six
 				br
 
 				p Features and Benefits

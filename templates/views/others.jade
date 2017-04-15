@@ -1,12 +1,12 @@
 extends ../layouts/default
 
 block content
-    if Vinyls.length
-        each Other in Vinyls
+    if Products.length
+        each Product in Products
             head
                 title Altius | Products | Sports
             div
-                img(src=Other.image.first, alt='Other Sports', width='100%')
+                img(src=Product.image.jumbotron_image, alt='Other Sports', width='100%')
                 //- Block1
             .container
                 .breadcram
@@ -14,37 +14,39 @@ block content
                     |  > Products  > Other Sports
             .whopage(style='padding-bottom:10px;')
                 .section-header
-                    h2.dark-text=Other.heading.first
+                    h2.dark-text=Product.title
             .section-header
                 .regular.container
                     div
-                        img(src=Other.image.second)
+                        img(src=Product.image.one)
                     div
-                        img(src=Other.image.third)
+                        img(src=Product.image.two)
                     div
-                        img(src=Other.image.fourth)
+                        img(src=Product.image.three)
                     div
-                        img(src=Other.image.fifth)
+                        img(src=Product.image.four)
+                    div
+                        img(src=Product.image.five) 
 
             .container.proPage
-                p=Other.content.first
+                p=Product.content.one
                     
                     
-                    strong=Other.content.second
+                    strong=Product.content.two
                     | ; 
                     br
-                    =Other.content.third
-                    strong=Other.content.fourth
+                    =Product.content.three
+                    strong=Product.content.four
                     |  and 
-                    strong=Other.content.fifth
+                    strong=Product.content.five
                     br
-                    =Other.content.sixth
-                    strong=Other.content.seventh
+                    =Product.content.six
+                    strong=Product.content.seven
                     br
-                    =Other.content.eight
-                    strong=Other.content.ninth
+                    =Product.content.eight
+                    strong=Product.content.nine
                     br
-                    =Other.content.tenth
-                    strong=Other.content.eleventh
+                    =Product.content.ten
+                    strong=Product.content.eleven
                 br
                 br

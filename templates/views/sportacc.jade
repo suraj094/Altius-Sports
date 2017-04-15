@@ -1,13 +1,13 @@
 extends ../layouts/default
 
 block content
-	if Vinyls.length
-		each SportsAcc in Vinyls
+	if Products.length
+		each Product in Products
 			head
 				title  Altius | Products | Other Products
 				
 			div
-				img(src=SportsAcc.image.first,alt="Lights, Nets & Accessorieshockey",width="100%")
+				img(src=Product.image.jumbotron_image,alt="Lights, Nets & Accessorieshockey",width="100%")
 			.container
 				.breadcram
 					<a href="/">Home</a>
@@ -15,27 +15,27 @@ block content
 			
 			.whopage
 				.section-header
-					h2.dark-text=SportsAcc.heading.first
+					h2.dark-text=Product.title
 				.container.proPage
 
 					
 			.section-header
 				.regular.container
 					div
-						img(src=SportsAcc.image.second)
+						img(src=Product.image.one)
 					div
-						img(src=SportsAcc.image.third)
+						img(src=Product.image.two)
 					div
-						img(src=SportsAcc.image.fourth)
+						img(src=Product.image.three)
 					div
-						img(src=SportsAcc.image.fifth)
+						img(src=Product.image.four)
 					div
-						img(src=SportsAcc.image.sixth)
+						img(src=Product.image.five)
 					div
-						img(src=SportsAcc.image.seventh)
+						img(src=Product.image.six)
 						
 			.container.proPage
-				p=SportsAcc.content.first
+				p=Product.content.one
 				br
 				br
 	

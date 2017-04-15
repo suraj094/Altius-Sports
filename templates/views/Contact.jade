@@ -10,15 +10,15 @@ block content
 	.container
 		.row.coninfo
 			.col-sm-4.col-xs-12
-				if contacts.length
-					each contact in contacts
-						h3=contact.content.first
+				if Contacts.length
+					each contact in Contacts
+						h3=contact.content.one
 				.contAdd
-					if contacts.length
-						each contact in contacts
-							h5= contact.content.second
+					if Contacts.length
+						each contact in Contacts
+							h5= contact.content.two
 							p
-							strong=contact.content.third
+							strong=contact.content.three
 							<br>
 							=contact.content.ten
 							<br>
@@ -38,7 +38,7 @@ block content
 							<br>
 							=contact.content.seventeen
 							<br>
-							=contact.content.eightteen
+							=contact.content.eighteen
 							<br>
 							=contact.content.nineteen
 							<br>
@@ -83,11 +83,11 @@ block content
 						//- |  info@altiussports.com
 			
 			.col-sm-4.col-xs-12
-				if contacts.length
-					each contact in contacts
-						h3= contact.content.fourth
-						iframe(src=contact.content.fiveth)
-						iframe(src=contact.content.Sixth)
+				if Contacts.length
+					each contact in Contacts
+						h3= contact.content.four
+						iframe(src=contact.content.five)
+						iframe(src=contact.content.six)
 				//- h3 Our Location
 				//- p
 				//- 	iframe(src=contact.content.Fiveth)
@@ -96,9 +96,9 @@ block content
 				//- 	iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.611509266415!2d77.20252871508077!3d28.551394582449873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d8a9e555555%3A0xa0bfba6cc448f7fc!2sCosy+Restaurant!5e0!3m2!1sen!2sin!4v1488191489162", width="100%", height="320", frameborder="0", style="border:0;", allowfullscreen="allowfullscreen")
 			
 			.col-sm-4.ol-xs-12.confrm
-				if contacts.length
-					each contact in contacts
-						h3= contact.content.Seventh
+				if Contacts.length
+					each contact in Contacts
+						h3= contact.content.seven
 				//- h3 Request a quote
 				#wpcf7-f56-p20-o1.wpcf7(role="form", lang="en-US", dir="ltr")
 					.screen-reader-response
@@ -128,10 +128,10 @@ block content
 						.wpcf7-response-output.wpcf7-display-none
 			
 			.col-sm-12(style="margin-top: 30px;")
-				if contacts.length
-					each contact in contacts
-						h3= contact.content.eightth
-						p= contact.content.nineth
+				if Contacts.length
+					each contact in Contacts
+						h3= contact.content.eight
+						p= contact.content.nine
 	
 
 

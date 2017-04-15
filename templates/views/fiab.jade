@@ -1,12 +1,12 @@
 extends ../layouts/default
 
 block content
-	if Statics.length
-		each static in Statics
+	if Fiabs.length
+		each fiab in Fiabs
 			head
 				title Field in a Box
 			.TopImgF
-				img(src=static.image.First, alt="slider")
+				img(src=fiab.image.jumbotron_image, alt="slider")
 			.container
 				.breadcram
 					a(href='/') Home
@@ -14,30 +14,31 @@ block content
 			.whopage
 				.container.products_list
 					.section-header
-						h2.dark-text=static.title
+						h2.dark-text=fiab.title
 				.container.propage
 					p.sanoF
-						img(src=static.image.Second,alt="slider", style="width:200px;")
-						=static.content.first
+						img(src=fiab.image.one,alt="slider", style="width:200px;")
+						=fiab.content.one
 						br
-						=static.content.second
+						=fiab.content.two
 						br
-						=static.content.third
+						=fiab.content.three
 						br
-						=static.content.fourth
+						=fiab.content.four
 						br
-						=static.content.Fifth
+						=fiab.content.five
 						br
-						=static.content.Sixth
+						=fiab.content.six
 						br
-						=static.content.Seventh
+						=fiab.content.seven
 						br
-						=static.content.Eighth
-						br
-						br
-						br
-						strong.dsk-quote=static.heading.First
+						=fiab.content.eight
 						br
 						br
-						=static.heading.Second
-					
+						br
+						strong.dsk-quote=fiab.content.nine
+						br
+						br
+						=fiab.content.ten 
+							a(href=fiab.content.eleven, target="_blank")  link 
+						=fiab.content.twelve

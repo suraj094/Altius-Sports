@@ -1,13 +1,13 @@
 extends ../layouts/default
 
 block content
-	if Statics.length
-		each static in Statics
+	if Paynplays.length
+		each pay in Paynplays
 			head
 				title Pay and Play
 
 			div
-				img(src=static.image.First, width="100%")
+				img(src=pay.image.jumbotron_image, width="100%")
 			.container
 				.breadcram
 					a(href="/") Home
@@ -15,70 +15,70 @@ block content
 			.whopage
 				.container.products_list
 					.section-header
-						h1.dark-text=static.title
+						h1.dark-text=pay.title
 					div
 						p(style="font-size: 16px; text-align:left; margin-bottom:20px; color:#0872c8; text-transform: uppercase;")
-							strong=static.heading.First
+							strong=pay.heading.one
 					.container.proPage
-						p=static.content.first
+						p=pay.content.one
 						
 					.sano_li
 						br
 						br
 						p(style="text-align:center; margin-bottom:20px;")
-							img(src=static.image.Second, alt="altius-lifestyle-logo")
+							img(src=pay.image.one, alt="altius-lifestyle-logo")
 							br.tiger-break
-							img.tiger-logo(src=static.image.Third, alt="altius-lifestyle-logo")
+							img.tiger-logo(src=pay.image.two, alt="altius-lifestyle-logo")
 						br
 						br
 						p(style="font-size: 16px; text-align:left; margin-bottom:20px; color:#0872c8; text-transform: uppercase;")
-							strong=static.heading.Second
+							strong=pay.heading.two
 					
 					.imgBoxes
 						ul
 							li
-								img.myImages(src=static.image.Fourth)
+								img.myImages(src=pay.image.three)
 								br
 								br
-								.gridFline=static.heading.Third
+								.gridFline=pay.description.one
 									
-								.gridSline=static.content.second
-									
-							li
-								img.myImages(src=static.image.Fifth)
-								br
-								br
-								.gridFline=static.heading.Fourth
-									
-								.gridSline=static.content.third
+								.gridSline=pay.description.six
 									
 							li
-								img.myImages(src=static.image.Sixth)
+								img.myImages(src=pay.image.four)
 								br
 								br
-								.gridFline=static.heading.Fifth
+								.gridFline=pay.description.two
 									
-								.gridSline=static.content.fourth
+								.gridSline=pay.description.seven
 									
 							li
-								img.myImages(src=static.image.Seventh)
+								img.myImages(src=pay.image.five)
 								br
 								br
-								.gridFline=static.heading.Sixth
+								.gridFline=pay.description.three
 									
-								.gridSline=static.content.Fifth
+								.gridSline=pay.description.eight
+									
+							li
+								img.myImages(src=pay.image.six)
+								br
+								br
+								.gridFline=pay.description.four
+									
+								.gridSline=pay.description.nine
 								
 							li
-								img.myImages(src=static.image.Eighth)
+								img.myImages(src=pay.image.seven)
 								br
 								br
-								.gridFline=static.heading.Seventh
+								.gridFline=pay.description.five
 									
-								.gridSline=static.content.Sixth
+								.gridSline=pay.description.ten
 									
-				.container.proPage
-					.side
-						h5=static.heading.Eighth
+				//- .container.proPage
+				//- 	.side
+				//- 		h5=static.heading.Eighth
 			br
 			br
 					

@@ -40,20 +40,20 @@ exports = module.exports = function (app) {
 	
 	app.get('/Our_Services',function(req, res){
 		var view = new keystone.View(req, res);
-		view.query('Statics', keystone.list('static').model.find().where('name', 'service'));
+		view.query('Services', keystone.list('Service').model.find().where('name', 'Service'));
 		view.render('Our_Services')
 	});
 
 		
 	app.get('/Case-Study-of-the-Month',function(req, res){
 	 	var view = new keystone.View(req, res);
-		 view.query('Case_studies', keystone.list('case_study').model.find());
+		 view.query('Case_Studies', keystone.list('case_Study').model.find().where('name','caseStudy'));
 		view.render('Case-Study-of-the-Month');
 	 });
 
 	app.get('/About_Us',function(req, res){
 		var view = new keystone.View(req, res);
-		view.query('Statics', keystone.list('static').model.find().where('name', 'About'));
+		view.query('Abouts', keystone.list('About').model.find().where('name', 'About'));
 		view.render('About_Us')
 	});
 
@@ -65,111 +65,111 @@ exports = module.exports = function (app) {
 	// app.get('/', routes.views.index);
 	app.get('/Products/Sports/track',function(req, res){
 		var view = new keystone.View(req, res);
-		view.query('Product_contents', keystone.list('product_content').model.findOne({'name' : 'tracks'}));
+		view.query('Products', keystone.list('Product').model.find().where('name' , 'Tracks'));
 		view.render('track');
 	});
 	app.get('/Products/Sports/badminton',function(req,res){
 		var view=new  keystone.View(req,res)
-		view.query('Badmintons', keystone.list('badminton').model.find().where('name', 'badminton'));
+		view.query('Products', keystone.list('Product').model.find().where('name', 'Badminton'));
 		view.render('badminton')
 	});
 	app.get('/Products/Sports/basketball',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Product_contents', keystone.list('product_content').model.findOne({'name' : 'basketball'}));
+		view.query('Products', keystone.list('Product').model.find().where('name' , 'Basketball'));
 		view.render('basketball')
 	});
 	app.get('/Products/Sports/cricket',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Product_contents', keystone.list('product_content').model.findOne({'name' : 'cricket'}));
+		view.query('Products', keystone.list('Product').model.find().where('name' , 'Cricket'));
 		view.render('cricket')
 	});
 	app.get('/Products/Sports/football',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Badmintons', keystone.list('badminton').model.find().where('name', 'football'));
+		view.query('Products', keystone.list('Product').model.find().where('name', 'Football'));
 		view.render('football')
 	});
 	app.get('/Products/Sports/hockey',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Product_contents', keystone.list('product_content').model.findOne({'name' : 'hockey'}));
+		view.query('Products', keystone.list('Product').model.find().where('name' , 'Hockey'));
 		view.render('hockey')
 	});
 	app.get('/Products/Sports/multi',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Badmintons', keystone.list('badminton').model.find().where('name', 'multi'));
+		view.query('Products', keystone.list('Product').model.find().where('name', 'Multi'));
 		view.render('multi')
 	});
 	app.get('/Products/Sports/others',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Vinyls', keystone.list('Vinyls').model.find().where('name','Other'));
+		view.query('Products', keystone.list('Product').model.find().where('name','Other'));
 		view.render('others')
 	});
 	app.get('/Products/Sports/tennis',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Badmintons', keystone.list('badminton').model.find().where('name', 'tennis'));
+		view.query('Products', keystone.list('Product').model.find().where('name', 'Tennis'));
 		view.render('tennis')
 	});
 	app.get('/Products/Sports/volleyball',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Product_contents', keystone.list('product_content').model.findOne({'name' : 'volleyball'}));
+		view.query('Products', keystone.list('Product').model.find().where('name' , 'Volleyball'));
 		view.render('volleyball')
 	});
 	app.get('/Leisure/children_play',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Badmintons', keystone.list('badminton').model.find().where('name', 'childrenplay'));
+		view.query('Products', keystone.list('Product').model.find().where('name', 'Childrenplay'));
 		view.render('children_play')
 	});
 	app.get('/Leisure/golf',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Product_contents', keystone.list('product_content').model.findOne({'name' : 'golf'}));
+		view.query('Products', keystone.list('Product').model.find().where('name' , 'Golf'));
 		view.render('golf')
 	});
 	app.get('/Leisure/landscape',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Badmintons', keystone.list('badminton').model.find().where('name', 'landscape'));
+		view.query('Products', keystone.list('Product').model.find().where('name', 'Landscape'));
 		view.render('landscape')
 	});
 	app.get('/Other-Products/vinyl',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Vinyls', keystone.list('Vinyls').model.find().where('name','Vinyl'));
+		view.query('Products', keystone.list('Product').model.find().where('name','Vinyl'));
 		view.render('vinyl')
 	});
 	app.get('/Other-Products/Shock_Pads',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Shockpads', keystone.list('Shockpad').model.find().where('name','Shock'));
+		view.query('Products', keystone.list('Product').model.find().where('name','Shockpads'));
 		view.render('Shock_Pads')
 	});
 	app.get('/Other-Products/sportacc',function(req,res){
 		var view=new keystone.View(req,res)
-		view.query('Vinyls', keystone.list('Vinyls').model.find().where('name','SportsAcc'));
+		view.query('Products', keystone.list('Product').model.find().where('name','SportsAcc'));
 		view.render('sportacc')
 	});
 	app.get('/Other-Products/base',function(req,res){
 		var view=new keystone.View(req,res);
-		view.query('Basems', keystone.list('Basem').model.find().where('name', 'base'));
+		view.query('Products', keystone.list('Product').model.find().where('name', 'Base_systems'));
 		view.render('base')
 	});
 	
 	app.get('/Media',function(req,res){
 		var view=new keystone.View(req,res);
-		view.query('Statics', keystone.list('static').model.find().where('name', 'media'));
+		view.query('Media', keystone.list('Media').model.find().where('name', 'Media'));
 		view.render('media')
 	});
 
 	app.get('/fiab',function(req,res){
 		var view=new keystone.View(req,res);
-		view.query('Statics', keystone.list('static').model.find().where('name', 'fiab'));
+		view.query('Fiabs', keystone.list('fiab').model.find().where('name', 'fiab'));
 		view.render('fiab')
 	});
 
 	app.get('/payandplay',function(req,res){
 		var view=new keystone.View(req,res);
-		view.query('Statics', keystone.list('static').model.find().where('name', 'paynplay'));
+		view.query('Paynplays', keystone.list('Paynplay').model.find().where('name', 'Paynplay'));
 		view.render('payandplay')
 	});
 
 	app.get('/Contact',function(req,res){
 		var view=new keystone.View(req,res)
-		 view.query('contacts', keystone.list('contact').model.find());
+		 view.query('Contacts', keystone.list('contact_us').model.find().where('name',"contact_us"));
 		view.render('Contact')
 	});
 ////////////////////////////// search///////////////////////////////////////////////////
@@ -188,38 +188,19 @@ exports = module.exports = function (app) {
 	
 	// console.log(search);
 	// console.log(filters.keywords.split(" "));
-		view.query('Product_contents', keystone.list('product_content').model.find(
+		view.query('Products', keystone.list('Product').model.find(
 		  {$text: {$search : req.params.search } },
             {score : {$meta: "textScore"} })
 			// db.collection.find({"Product_contents":{"$in":["hockey","cricket"]}}) db.collection.find({"Abouts":{"$in":["About_Us","Our_Services"]}})
         
-      
-		);
+      );
 
-		view.query('Badmintons', keystone.list('badminton').model.find(
-		  {$text: {$search : req.params.search } },
-            {score : {$meta: "textScore"} })
-		);
 
-		view.query('basems', keystone.list('Basem').model.find(
+			view.query('Contacts', keystone.list('contact_us').model.find(
 		  {$text: {$search : req.params.search } },
             {score : {$meta: "textScore"} })
 		);
-
-		view.query('Shockpads', keystone.list('Shockpad').model.find(
-		  {$text: {$search : req.params.search } },
-            {score : {$meta: "textScore"} })
-		);
-
-		view.query('statics', keystone.list('static').model.find(
-		  {$text: {$search : req.params.search } },
-            {score : {$meta: "textScore"} })
-		);
-				view.query('Contacts', keystone.list('contact').model.find(
-		  {$text: {$search : req.params.search } },
-            {score : {$meta: "textScore"} })
-		);
-				view.query('cases', keystone.list('case_study').model.find(
+				view.query('cases', keystone.list('case_Study').model.find(
 		  {$text: {$search : req.params.search } },
             {score : {$meta: "textScore"} })
 		);
@@ -227,10 +208,24 @@ exports = module.exports = function (app) {
 		  {$text: {$search : req.params.search } },
             {score : {$meta: "textScore"} })
 		);
-				view.query('vinyls', keystone.list('Vinyls').model.find(
+				view.query('Fiab', keystone.list('fiab').model.find(
 		  {$text: {$search : req.params.search } },
             {score : {$meta: "textScore"} })
-		);	
+		);
+				view.query('Media', keystone.list('Media').model.find(
+		  {$text: {$search : req.params.search } },
+            {score : {$meta: "textScore"} })
+		);
+				view.query('Pay', keystone.list('Paynplay').model.find(
+		  {$text: {$search : req.params.search } },
+            {score : {$meta: "textScore"} })
+		);
+				view.query('Service', keystone.list('Service').model.find(
+		  {$text: {$search : req.params.search } },
+            {score : {$meta: "textScore"} })
+		);
+	
+	
 		//  console.log(assets);
 		view.render('search');
 });
