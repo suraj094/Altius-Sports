@@ -2275,6 +2275,7 @@ font-size: 15px;
 .noResult{
     font-size: 20px;
     text-align: center;
+    font-weight:700;
 }
 #return-text{
 width:200px;

@@ -48,7 +48,7 @@ var url = window.location.href;
       return false;
     } else {
     $.ajax({
-    url: "https://mailthis.to/abhishek.nayyar93@gmail.com", 
+    url: "https://mailthis.to/info@altiussports.com", 
     method: "POST",
     data: {email: email.value},
     dataType: "text/html",
