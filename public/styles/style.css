@@ -1649,7 +1649,7 @@ left: 0px;
 }
 .our_servic figcaption p{
  
-    text-align: center;
+    text-align: justify;
 }
 
 }
@@ -2310,6 +2310,6 @@ float:left;
 
 #keywords{
     width: 97%;
-    margin-left: -46%;
+    margin-left:2%;
     }
 }
