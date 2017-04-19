@@ -32,7 +32,9 @@ var url = window.location.href;
       $(this).get(0).reset();
       document.getElementById('return-text-contact').innerHTML = "* Thank You! Our program advisor will contact you soon";
     //   window.location = "http://localhost:3000/products";
-      window.history.go(0);
+      setTimeout(function(){
+	location.reload();
+	},5000);
     }
     // window.history.go(0);
   });
@@ -57,7 +59,9 @@ var url = window.location.href;
       $(this).get(0).reset();
       document.getElementById('return-text').innerHTML = "* Thank You for subscribing our newsletter";
     //   window.location = "http://localhost:3000/products";
-      window.history.go(0);
+      setTimeout(function(){
+        location.reload();
+      }, 6000);
     }
     // window.history.go(0);
   });
