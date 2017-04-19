@@ -578,7 +578,7 @@ color: #fff;
 }
 .input-box {
     border: 0;
-    width: 274px;
+    width: 300px;
     text-align: left;
     text-transform: none;
     padding: 9px;
@@ -2279,12 +2279,12 @@ font-size: 15px;
 }
 #return-text{
 width:200px;
-background-color:#585858;
+background-color:#FF5733;
 text-align:center;
 margin-left:475px;
 color:#ffffff;
 font-size:15px;
-opacity:0.7;
+opacity:0.8;
 }
 
 #return-text-contact{

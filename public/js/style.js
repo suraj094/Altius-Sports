@@ -57,7 +57,7 @@ var url = window.location.href;
 });
       e.preventDefault();
       $(this).get(0).reset();
-      document.getElementById('return-text').innerHTML = "* Thank You for subscribing our newsletter";
+      document.getElementById('emailId').value = "* Thank You for subscribing our newsletter";
     //   window.location = "http://localhost:3000/products";
       setTimeout(function(){
         location.reload();
